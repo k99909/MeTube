@@ -4,19 +4,17 @@ import VideoIndexContainer from './videos/video_index_container';
 import { AuthRoute, ProtectedRoute } from './utils/route_utils';
 import SignupContainer from './session/signup_form_container';
 import LoginFormContainer from './session/login_form_container';
-import HeaderContainer from './header/header_container';
-import { Link } from 'react-router-dom';
+import Header from './header/header';
+import { Link, Redirect, Switch } from 'react-router-dom';
+import Main from './main/main';
 
 export default () => (
-    <div>
-        <header>
-            <Link to="/" className="header-link">
-                <h1>MeTube</h1>
-            </Link>
-            <HeaderContainer />
-        </header>
+    <div className="main-div">
+        <Switch>
         <AuthRoute exact path="/signup" component={SignupContainer}/>
         <AuthRoute exact path="/login" component={LoginFormContainer}/>
-        <Route exact path="/" component={VideoIndexContainer}/>
+        <Route exact path="/" component={Main}/>
+        <Route render={() => <Redirect to={{ pathname: "" }} />} />
+        </Switch>
     </div>
 )

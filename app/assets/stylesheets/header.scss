@@ -1,0 +1,26 @@
+.header {
+    border: 1px black solid;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 2rem;
+    width: 100%;
+}
+
+.header-link {
+    text-decoration: none;
+}
+
+.login-signup, .header-group {
+    border: 1px black solid;
+    display: flex;
+    align-items: center;
+    height: 1rem;
+    margin: 0px, 10%, 0px, 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+

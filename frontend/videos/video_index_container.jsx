@@ -3,11 +3,11 @@ import { connect } from 'react-redux';
 import VideoIndex from './video_index';
 
 const mSTP = state => {
-    return null 
+    return {}
 }
 
 const mDTP = dispatch => {
-    return null
+    return {}
 }
 
 export default connect(mSTP, mDTP)(VideoIndex);
