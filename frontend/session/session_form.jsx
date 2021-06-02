@@ -9,11 +9,10 @@ class SessionForm extends React.Component {
         };
         this.handleSubmit = this.handleSubmit.bind(this)
         this.demoLogin = this.demoLogin.bind(this)
-        this.renderErrors = this.renderErrors.bind(this)
     }
 
     componentWillUnmount() {
-        this.props.clearErrors();
+        this.props.clearErrors;
     }
 
     update(field) {
