@@ -12,7 +12,7 @@ class SessionForm extends React.Component {
     }
 
     componentWillUnmount() {
-        this.props.clearErrors;
+        this.props.clearErrors();
     }
 
     update(field) {
@@ -75,8 +75,10 @@ class SessionForm extends React.Component {
                                 className="login-input"
                             />
                         </label>
-                        <input className="session-submit" type="submit" value={this.props.formType}/>
-                        {(this.props.formType==="login") ? <button className="demo-login" onClick={this.demoLogin}>Demo Login</button> : ''}
+                        <div className='buttons'>
+                            {(this.props.formType==="login") ? <button className="demo-login" onClick={this.demoLogin}>Demo Login</button> : ''}
+                            <input className="session-submit" type="submit" value={this.props.formType}/>
+                        </div>
                     </div>
                 </form>
             </div>
