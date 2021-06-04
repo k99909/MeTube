@@ -28,6 +28,7 @@ const Sidebar = ({currentUser, logout}) => {
                     <span>Log Out</span>
                 </li> : <li>
                     <Link to="/login"><MdExitToApp size={23} /></Link>
+                    <span>Sign In</span>
                 </li> }
         </nav>
     )

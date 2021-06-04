@@ -41,3 +41,9 @@
     background-color: transparent;
     outline: none;
 }
+
+.buttons {
+    button, input {
+        cursor: pointer;
+    }
+}
