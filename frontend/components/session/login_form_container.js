@@ -1,14 +1,14 @@
 import { connect } from 'react-redux';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { login, clearErrors } from '../actions/session';
+import { login, clearErrors } from '../../actions/session';
 import SessionForm from './session_form';
 
 const mapStateToProps = ({ errors }) => {
     return {
         errors: errors.session,
         formType: 'login',
-        navLink: <Link to="/signup">Sign Up instead</Link>
+        navLink: <Link to="/signup">Sign Up</Link>
     }
 }
 

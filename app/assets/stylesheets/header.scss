@@ -1,26 +1,135 @@
 .header {
-    border: 1px black solid;
-    display: flex;
-    justify-content: space-around;
+    border: 1px lightgrey solid;
+    display: grid;
+    grid-template-columns: 2.5% 15% auto 15% 10%;
     align-items: center;
-    height: 2rem;
-    width: 100%;
+    height: 4rem;
+    width: 100vw;
+    padding-left: 10px;
+    padding-right: 10px;
+    overflow: visible;
+    position: fixed;
+    background-color: white;
 }
+
+
 
 .header-link {
     text-decoration: none;
+    grid-column: 2;
+    justify-self: start;
 }
 
-.login-signup, .header-group {
+.header-group {
+    justify-self: center;
+    grid-column: 5;
+}
+
+.login-signup, .header-button {
     border: 1px black solid;
-    display: flex;
-    align-items: center;
-    height: 1rem;
-    margin: 0px, 10%, 0px, 0px;
+    display: grid;
+    place-items: center;
+    width: 4.5rem;
+    height: 2rem;
+    // margin: 0px, 10%, 0px, 0px;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: rgb(26, 115, 232);
+    background-color: white;
+    cursor: pointer;
+    grid-column: 5
+}
+
+#signin-topright {
+    a, a:visited {
+      color: rgb(26, 115, 232);
+    }
 }
 
 a {
     text-decoration: none;
 }
 
+a, a:visited{
+     color: black;
+}
 
+.dropbtn {
+    width: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    background-color: yellowgreen;
+    // border: 2px solid #666;
+    cursor: pointer;
+    color: white;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  right: 0;
+}
+
+.dropdown-content a, .dropdown-content h2 {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+//   display: flex;
+}
+
+.dropdown-content a:hover {background-color: #ddd}
+
+.show {display:block;}
+
+.dropdown .dropbtn {
+    outline: none;
+    border: none;
+}
+
+.dropdown-item {
+    display: grid;
+    grid-template-columns: 30% auto;
+}
+
+.search-bar {
+    grid-column: 3;
+    justify-self: center;
+    input {
+        width: 30rem;
+        height: 2rem;
+        border-color: lightgray;
+        border-width: 0.5px;
+        // border-radius: 3px;
+        &:focus {
+            outline: none;
+        }
+    }
+    button {
+        height: 2.3rem;
+        width: 4rem;
+        border-color: lightgray;
+        border-width: 0.5px;
+        // border-radius: 3px;
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+.sidebar-icon {
+    grid-column: 1;
+    justify-self: center;
+    width: 1.5rem;
+    cursor: pointer;
+}

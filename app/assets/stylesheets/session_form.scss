@@ -16,6 +16,8 @@
     width: 20rem;
 }
 
+
+
 .session-submit, .demo-login {
     background-color: rgb(26, 115, 232);
     border-bottom-left-radius: 4px;
@@ -32,4 +34,10 @@
     display: flex;
     justify-content: space-around;
     width: 100%; 
+}
+
+#dropdown-header {
+    border: none;
+    background-color: transparent;
+    outline: none;
 }

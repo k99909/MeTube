@@ -55,7 +55,7 @@ class SessionForm extends React.Component {
                 <h2>{this.props.formType}!</h2>
                     Welcome to MeTube!
                     <br />
-                    Please {this.props.formType} or {this.props.navLink}
+                        <a>{(this.props.formType === "login") ? 'Log In or' : 'Sign Up or'} {this.props.navLink}</a>
                     {this.renderErrors()}
                         <label>
                             <input 

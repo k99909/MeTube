@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 import VideoIndexContainer from './videos/video_index_container';
-import { AuthRoute, ProtectedRoute } from './utils/route_utils';
+import { AuthRoute, ProtectedRoute } from '../utils/route_utils';
 import SignupContainer from './session/signup_form_container';
 import LoginFormContainer from './session/login_form_container';
 import Header from './header/header';

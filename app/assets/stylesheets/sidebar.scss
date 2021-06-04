@@ -1,0 +1,50 @@
+.app-container {
+    display: flex;
+    padding-top: 4rem;
+}
+
+.sidebar.show {
+    border: none;
+    border-right: 1px solid lightgray;
+    height: 100vh;
+    width: 8vw;
+    li { 
+        list-style: none;
+        display: flex;
+        align-items: center;
+        padding: 1.32rem;
+        padding-left: 1.6rem;
+        cursor: pointer;
+        span {
+            display: block;
+            margin-left: 1rem;
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: 0.3px;
+        }
+        &:hover {
+            background-color: lightgray;
+        }
+    }
+}
+
+.sidebar {
+    padding-top: 2rem;
+    border: none;
+    border-right: 1px solid lightgray;
+    height: 100vh;
+    width: 3vw;
+    li { 
+        list-style: none;
+        padding: 1.32rem;
+        padding-bottom: 1.09rem;
+        cursor: pointer;
+        text-align: center;
+        span {
+            display: none;
+        }
+        &:hover {
+            background-color: lightgray;
+        }
+    }
+}
