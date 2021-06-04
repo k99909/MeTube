@@ -1,13 +1,13 @@
 .header {
     border: 1px lightgrey solid;
     display: grid;
-    grid-template-columns: 2.5% 15% auto 15% 10%;
+    grid-template-columns: 5rem 15% auto 15% 10%;
     align-items: center;
     height: 4rem;
     width: 100vw;
-    padding-left: 10px;
+    // padding-left: 10px;
     padding-right: 10px;
-    overflow: visible;
+    // overflow: visible;
     position: fixed;
     background-color: white;
 }
@@ -106,7 +106,7 @@ a, a:visited{
     grid-column: 3;
     justify-self: center;
     input {
-        width: 30rem;
+        width: 30vw;
         height: 2rem;
         border-color: lightgray;
         border-width: 0.5px;
