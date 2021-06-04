@@ -2,7 +2,7 @@ import React from 'react'
 
 export const VideoItem = () => {
     return (
-        <div>
+        <div className="video-index-item">
             Video
         </div>
     )

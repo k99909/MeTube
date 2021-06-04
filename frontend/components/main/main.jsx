@@ -9,9 +9,9 @@ const Main = () => (
         <Header/>
         <div className="app-container">
         <SidebarContainer/>
-        <Container fluid className="app-main">
+        {/* <Container fluid className="app-main"> */}
         <VideoIndexContainer/>
-        </Container>
+        {/* </Container> */}
         </div>
     </div>
 )

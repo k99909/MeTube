@@ -6,13 +6,13 @@ class VideoIndex extends React.Component {
     render() {
         
         return (
-            <Container>
-                <Row>
-                    {[...new Array(20)].map(() => (
+            // <Container>
+                <div className="video-index-grid">
+                    {[...new Array(12)].map(() => (
                         <VideoItem />
                     ))}
-                </Row>
-            </Container>
+                </div>
+            // </Container>
         )
     }
 }

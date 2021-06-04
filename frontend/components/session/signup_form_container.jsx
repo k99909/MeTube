@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { createNewUser, clearErrors } from '../../actions/session';
+import { createNewUser, clearErrors } from '../../actions/session_actions';
 import SessionForm from './session_form';
 import React from 'react';
 import { Link } from 'react-router-dom';

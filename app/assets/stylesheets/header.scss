@@ -105,12 +105,15 @@ a, a:visited{
 .search-bar {
     grid-column: 3;
     justify-self: center;
+    border: 0.5px solid lightgray;
+    border-radius: 2px;
     input {
         width: 30vw;
         height: 2rem;
-        border-color: lightgray;
+        // border-color: lightgray;
         border-width: 0.5px;
-        // border-radius: 3px;
+        border-radius: 3px;
+        border: none;
         &:focus {
             outline: none;
         }
@@ -118,12 +121,16 @@ a, a:visited{
     button {
         height: 2.3rem;
         width: 4rem;
-        border-color: lightgray;
+        // border-color: lightgray;
         border-width: 0.5px;
+        background-color: rgb(244, 244, 244);
         // border-radius: 3px;
+        border-left: 0.5px solid lightgray;
         &:focus {
             outline: none;
         }
+        border: none;
+        cursor: pointer;
     }
 }
 
