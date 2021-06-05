@@ -2,10 +2,11 @@
     display: grid;
     width: 100%;
     grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 33% 33% 33%;
+    grid-template-rows: 30% 30% 30%;
+    padding: 2rem;
 }
 
 .video-index-item {
-    justify-self: center;
-    align-self: center;
+    // justify-self: center;
+    // align-self: center;
 }

@@ -9,8 +9,74 @@
 
 # require 'faker'
 
+Video.destroy_all
 User.destroy_all
 
+
 users = User.create([    
-    {username: 'demo_user', password: 'demo123'}
+    {username: 'demo_user', password: 'demo123'},
+    {username: 'kaz', password: 'kazkaz'}
+])
+
+videos = Video.create([
+    {
+        view_count: 10000, 
+        title: 'video1', 
+        uploader_id: User.find_by_credentials('kaz', 'kazkaz').id    
+    },
+    {
+        view_count: 10000, 
+        title: 'video2', 
+        uploader_id: User.find_by_credentials('kaz', 'kazkaz').id    
+    },
+    {
+        view_count: 10000, 
+        title: 'video3', 
+        uploader_id: User.find_by_credentials('kaz', 'kazkaz').id    
+    },
+    {
+        view_count: 10000, 
+        title: 'video4', 
+        uploader_id: User.find_by_credentials('kaz', 'kazkaz').id    
+    },
+    {
+        view_count: 10000, 
+        title: 'video5', 
+        uploader_id: User.find_by_credentials('kaz', 'kazkaz').id    
+    },
+    {
+        view_count: 10000, 
+        title: 'video6', 
+        uploader_id: User.find_by_credentials('kaz', 'kazkaz').id    
+    },
+    {
+        view_count: 10000, 
+        title: 'video7', 
+        uploader_id: User.find_by_credentials('kaz', 'kazkaz').id    
+    },
+    {
+        view_count: 10000, 
+        title: 'video8', 
+        uploader_id: User.find_by_credentials('kaz', 'kazkaz').id    
+    },
+    {
+        view_count: 10000, 
+        title: 'video9', 
+        uploader_id: User.find_by_credentials('kaz', 'kazkaz').id    
+    },
+    {
+        view_count: 10000, 
+        title: 'video10', 
+        uploader_id: User.find_by_credentials('kaz', 'kazkaz').id    
+    },
+    {
+        view_count: 10000, 
+        title: 'video11', 
+        uploader_id: User.find_by_credentials('kaz', 'kazkaz').id    
+    },
+    {
+        view_count: 10000, 
+        title: 'video12', 
+        uploader_id: User.find_by_credentials('kaz', 'kazkaz').id    
+    }
 ])

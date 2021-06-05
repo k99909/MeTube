@@ -15,11 +15,11 @@ class Api::UsersController < ApplicationController
   end
 
   private
-  
+
   def selected_user
-    User.find(params[:id])
+    User.find_by(id: params[:id])
   end
-  
+
   def user_params
     params.require(:user).permit(:username, :password)
   end

@@ -5,13 +5,13 @@ import { fetchVideos } from '../../actions/video_actions'
 
 const mSTP = state => {
     return {
-        videos: state.entities.videos
+        videos: Object.values(state.entities.videos)
     }
 }
 
 const mDTP = dispatch => {
     return {
-        fetchVideos: () => dispatch(fetchVideos)
+        fetchVideos: () => dispatch(fetchVideos())
     }
 }
 

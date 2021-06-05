@@ -1,3 +1,3 @@
 @videos.each do |video|
-    json.partial! 'index', video: video
+    json.partial! 'video', video: video
 end

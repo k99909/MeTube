@@ -47,4 +47,4 @@ export const login = formUser => dispatch => postSession(formUser)
 
 
 export const logout = () => dispatch => deleteSession()
-    .then(user => dispatch(logoutCurrentUser()));
+    .then(() => dispatch(logoutCurrentUser()));

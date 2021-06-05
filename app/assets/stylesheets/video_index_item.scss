@@ -1,0 +1,38 @@
+.video-index-item {
+    width: 100%;
+    .thumbnail {
+        height: 65%;
+        width: 100%;
+    }
+    p {
+        font-weight: bold;
+        font-size: 1rem;
+    }
+    span {
+        font-size: 0.75rem;
+        padding-bottom: 1.5rem;
+    }
+    .vid-index-info {
+        height: 35%;
+        width: 100%;
+        display: flex;
+    }
+    .vid-index-text {
+        height: 100%;
+        padding-left: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .vid-index-prof {
+        margin-top: 0.3rem;
+        width: 30px;
+        line-height: 34px;
+        border-radius: 50%;
+        text-align: center;
+        background-color: black;
+        cursor: pointer;
+        color: white;
+        height: 30px;
+    }
+}
