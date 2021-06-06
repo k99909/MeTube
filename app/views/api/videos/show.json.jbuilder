@@ -1,1 +1,1 @@
-json.partial! 'video' video: @video
+json.partial! 'video', video: @video

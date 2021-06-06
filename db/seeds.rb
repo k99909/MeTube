@@ -80,3 +80,9 @@ videos = Video.create([
         uploader_id: User.find_by_credentials('kaz', 'kazkaz').id    
     }
 ])
+
+thumbnail = "/Users/kazukidebear/Downloads/thumbnail.png"
+
+Video.all.each do |video| 
+    video.thumbnail.attach(io: File.open(thumbnail), filename: 'thumbnail.png')
+end

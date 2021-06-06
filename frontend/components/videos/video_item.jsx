@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaUserAlt } from 'react-icons/fa';
-
+import { Link } from 'react-router-dom';
 
 class VideoItem extends React.Component {
     constructor(props) {
@@ -20,18 +20,22 @@ class VideoItem extends React.Component {
         return (
             <div className="video-index-item">
 
+                <Link to={`/watch/${this.props.video.id}`}>
                 <div className="thumbnail">
-                    thumbnail
+                    <img src={`${this.props.video.thumbnail}`} alt="thumbnail" />
                 </div>
+                </Link>
 
                 <div className="vid-index-info">
                     <div className="vid-index-prof">
                         <FaUserAlt color={'white'} />
                     </div>
+                    <Link to={`/watch/${this.props.video.id}`}>
                     <div className="vid-index-text">
                         <p>{this.props.video.title}</p>
                         <span>{this.props.video.username}</span>
                     </div>
+                    </Link>
                 </div>
 
             </div>

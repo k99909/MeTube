@@ -6,6 +6,7 @@ import SignupContainer from './session/signup_form_container';
 import LoginFormContainer from './session/login_form_container';
 import Header from './header/header';
 import { Link, Redirect, Switch } from 'react-router-dom';
+import SingleVideoContainer from './videos/single_video_container';
 import Main from './main/main';
 
 export default () => (
@@ -14,6 +15,7 @@ export default () => (
         <AuthRoute exact path="/signup" component={SignupContainer}/>
         <AuthRoute exact path="/login" component={LoginFormContainer}/>
         <Route exact path="/" component={Main}/>
+        <Route path="/watch/:videoId" component={SingleVideoContainer}/>
         <Route render={() => <Redirect to={{ pathname: "" }} />} />
         </Switch>
     </div>
