@@ -8,6 +8,7 @@
 
 
 # require 'faker'
+require 'open-uri'
 
 Video.destroy_all
 User.destroy_all
@@ -81,10 +82,10 @@ videos = Video.create([
     }
 ])
 
-thumbnail = "/Users/kazukidebear/Downloads/thumbnail.png"
-videoUrl = "/Users/kazukidebear/Downloads/testvid.mov"
+thumbnail = 'https://active-storage-metube-dev.s3-us-west-1.amazonaws.com/thumbnail.png'
+videoUrl = 'https://active-storage-metube-dev.s3-us-west-1.amazonaws.com/testvid.mov'
 
 Video.all.each do |video| 
-    video.thumbnail.attach(io: File.open(thumbnail), filename: 'thumbnail.png')
-    video.upload.attach(io: File.open(videoUrl), filename: 'testvid.mov')
+    video.thumbnail.attach(io: open(thumbnail), filename: 'thumbnail.png')
+    video.upload.attach(io: open(videoUrl), filename: 'testvid.mov')
 end
