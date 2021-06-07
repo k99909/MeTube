@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSignOutAlt, faHome } from '@fortawesome/fontawesome-free-solid'
+import { faSignOutAlt, faHome } from '@fortawesome/fontawesome-free-solid';
+import { BiVideoPlus } from "react-icons/bi";
+
 
 
 const Greeting = ({ currentUser, logout }) => {
@@ -18,6 +20,14 @@ const Greeting = ({ currentUser, logout }) => {
 
     const personalGreeting = () => (
         <hgroup className="header-group">
+            <div className="create-video">
+                <div className="create-dropdown">
+                    <Link to="/create"><BiVideoPlus size={30} /></Link>
+                    <div className="create-dropdown-content">
+                        <span>Create</span>
+                    </div>
+                </div>
+            </div>
             <div className="dropdown">
                 <button onClick={dropdownClick} className="dropbtn">
                     {currentUser.username.slice(0, 1).toUpperCase()}

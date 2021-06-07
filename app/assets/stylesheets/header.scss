@@ -1,7 +1,7 @@
 .header {
     border: 1px lightgrey solid;
     display: grid;
-    grid-template-columns: 5rem 15% auto 15% 10%;
+    grid-template-columns: 5rem 15% auto 5% 20%;
     align-items: center;
     height: 4rem;
     width: 100vw;
@@ -23,6 +23,14 @@
 .header-group {
     justify-self: center;
     grid-column: 5;
+    display: flex;
+    width: 40%;
+    // padding-right: 2rem;
+    justify-content: space-between;
+}
+
+.create-video {
+    padding-top: 1px;
 }
 
 .login-signup, .header-button {
@@ -139,4 +147,38 @@ a, a:visited{
     justify-self: center;
     width: 1.5rem;
     cursor: pointer;
+}
+
+.create-dropdown-content {
+  display: none;
+  opacity: 0;
+  position: absolute;
+  text-align: center;
+  background-color: rgba(62, 62, 62, 0.647);
+  width: 50px;
+  margin-top: 30px;
+  left: 45%;
+  transform: translateX(-50%);
+//   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  transition: opacity 1s ease-in;
+}
+
+.create-dropdown-content span {
+  color: white;
+  padding: 8px;;
+  text-decoration: none;
+  display: block;
+  font-size: 12px;
+}
+
+.create-dropdown {
+    position: relative;
+    display: inline-block;
+    float: middle;
+}
+
+.create-dropdown:hover .create-dropdown-content {
+    display: block; 
+    opacity:100% ;
 }

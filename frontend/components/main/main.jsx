@@ -6,9 +6,9 @@ import { Container } from 'react-bootstrap'
 
 const Main = () => (
     <div>
-        <Header/>
+        {/* <Header/> */}
         <div className="app-container">
-        <SidebarContainer/>
+        <SidebarContainer homePage={'true'}/>
         {/* <Container fluid className="app-main"> */}
         <VideoIndexContainer/>
         {/* </Container> */}

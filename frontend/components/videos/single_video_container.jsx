@@ -18,7 +18,6 @@ const mDTP = dispatch => ({
     deleteVideo: videoId => dispatch(deleteVideo(videoId)),
     fetchVideo: videoId => dispatch(fetchVideo(videoId)),
     updateVideo: video => dispatch(updateVideo(video)),
-    fetchUser: userId => dispatch(fetchUser(userId))
 })
 
 

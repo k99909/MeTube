@@ -20,6 +20,16 @@ class Api::VideosController < ApplicationController
     end
 
     def create
+        if params[:video][:thumbnail] == "" && params[:video][:upload] == ""
+            render json: ["Video and Thumbnail are required"], status: 422
+            return nil
+        elsif params[:video][:thumbnail] == ""
+            render json: ["Thumbnail is required"], status: 422
+            return nil
+        elsif params[:video][:upload] == ""
+            render json: ["Video file is required"], status: 422
+            return nil
+        end
         @video = Video.new(video_params);
         if @video.save
             render :show
@@ -40,7 +50,7 @@ class Api::VideosController < ApplicationController
     private
 
     def video_params
-        params.require(:video).permit(:id, :title, :description, :author_id, :view_count)
+        params.require(:video).permit(:id, :title, :description, :uploader_id, :view_count, :upload, :thumbnail)
     end
 
 end

@@ -13,10 +13,13 @@ export const fetchVideo = videoId => {
 }
 
 export const postVideo = video => {
+    console.log(video)
     return $.ajax({
         method: 'POST',
-        url: `api/video`,
-        data: { video }
+        url: `api/videos`,
+        data: video,
+        contentType: false,
+        processData: false
     })
 }
 
@@ -24,7 +27,9 @@ export const updateVideo = video => {
     return $.ajax({
         method: 'PATCH',
         url: `api/videos/${video.id}`,
-        data: { video }
+        data: video,
+        contentType: false,
+        processData: false
     })
 }
 

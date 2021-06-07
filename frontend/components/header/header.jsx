@@ -18,7 +18,6 @@ class Header extends React.Component {
     render() {
         return (
             <header className="header">
-
                 <FontAwesomeIcon icon={faBars} className="sidebar-icon" onClick={this.sidebarClick}/>
 
                 <Link to="/" className="header-link">

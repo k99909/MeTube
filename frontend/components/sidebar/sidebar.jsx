@@ -7,9 +7,9 @@ import {
 } from 'react-icons/md'
 import { Link } from 'react-router-dom';
 
-const Sidebar = ({currentUser, logout}) => {
+const Sidebar = ({currentUser, logout, homePage}) => {
     return (
-        <nav className="sidebar" id="sidebar-menu">
+        <nav className={homePage ? "sidebar" : "sidebar hidden"} id="sidebar-menu">
             <li>
                 <MdHome size={23} />
                 <span>Home</span>
