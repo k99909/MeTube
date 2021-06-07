@@ -42,10 +42,12 @@ class VideoForm extends React.Component {
         let thumbnail = this.state.selectedThumbnail;
 
         formData.append('video[uploader_id]', this.props.currentUser)
-        this.setState({ title: '' });
-        this.setState({  description: ''});
-        this.setState({ selectedVideo: '' });
-        this.setState({ selectedThumbnail: '' });
+        this.setState({ 
+            title: '', 
+            description: '',
+            selectedVideo: '',
+            selectedThumbnail: ''
+        });
 
         if (this.props.action === "Upload Video"){
             formData.append('video[view_count]', 0);

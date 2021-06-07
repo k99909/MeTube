@@ -20,7 +20,7 @@ class SingleVideo extends React.Component {
     render() {
         return(
             <div className="video-show-page-whole">
-                <Header />
+                {/* <Header /> */}
                 <div className="video-show-page">
                     {this.props.video ? 
                     <div className="video-show-container">
