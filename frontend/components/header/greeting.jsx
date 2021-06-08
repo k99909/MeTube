@@ -3,12 +3,15 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSignOutAlt, faHome } from '@fortawesome/fontawesome-free-solid';
 import { BiVideoPlus } from "react-icons/bi";
-
+import { FaUserAlt } from 'react-icons/fa'
 
 
 const Greeting = ({ currentUser, logout }) => {
     const sessionLinks = () => (
         <nav className="login-signup" id="signin-topright">
+            <div className="vid-index-prof">
+                <FaUserAlt color={'white'} size={15}/>
+            </div>
             <Link to="/login">SIGN IN</Link>
         </nav>
     );
@@ -22,7 +25,7 @@ const Greeting = ({ currentUser, logout }) => {
         <hgroup className="header-group">
             <div className="create-video">
                 <div className="create-dropdown">
-                    <Link to="/create"><BiVideoPlus size={30} /></Link>
+                    <Link to="/create"><BiVideoPlus size={30} color={'grey'} /></Link>
                     <div className="create-dropdown-content">
                         <span>Create</span>
                     </div>

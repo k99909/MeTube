@@ -73,23 +73,28 @@ class VideoForm extends React.Component {
         return (
             <div className="video-form">
                 {/* {console.log(this.props.currentUser)} */}
-                <h1>{this.props.action}</h1>
 
                 <div className="video-form-box">
+                    <h1>{this.props.action}</h1>
                     {this.props.errors ? this.props.errors.map(err => <div className="video-error">{err}</div>) : ''}
-                    <label>Upload Video:
-                        <input type="file" className="video-upload" onChange={this.updateVideo} accept="video/*" />
-                    </label>
-                    <label>Upload Thumbnail:
-                        <input type="file" className="thumbnail-upload" onChange={this.updateThumbnail} accept="image/*"/>
-                    </label>
-                    <label>Title:
-                        <input className="title-upload" value={this.state.title} type="text" onChange={this.updateTitle} />
-                    </label>
-                    <label>Description:
-                        <textarea className="description-upload" value={this.state.description} onChange={this.updateDescription} cols="30" rows="10"></textarea>
-                    </label>
-                    <button className="upload-submit" type="submit" onClick={this.createVideo}>Upload Video</button>
+                    <h2>Details</h2>
+                    <div className="video-form-main">
+                        <div className="details">
+                            <label className="title-label">Title (required)
+                                <input className="title-upload" value={this.state.title} type="text" onChange={this.updateTitle} />
+                            </label>
+                            <label className="description-label">Description
+                                <textarea className="description-upload" value={this.state.description} onChange={this.updateDescription} cols="30" rows="10"></textarea>
+                            </label>
+                            <label className="thumbnail-label">Upload Thumbnail
+                                <input type="file" className="thumbnail-upload" onChange={this.updateThumbnail} accept="image/*"/>
+                            </label>
+                        </div>
+                        <label className="video-label">Upload Video
+                            <input type="file" className="video-upload" onChange={this.updateVideo} accept="video/*" />
+                        </label>
+                    </div>
+                    <button className="upload-submit" type="submit" onClick={this.createVideo}>Confirm</button>
                 </div>
             </div>
         )

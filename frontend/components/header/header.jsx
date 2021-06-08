@@ -26,8 +26,11 @@ class Header extends React.Component {
 
                 <form className="search-bar">
                     <input type="text" placeholder="Search"/>
-                    <button type='submit'>
+                    <button className="search-button" type='submit'>
                         <FontAwesomeIcon icon={faSearch}/>
+                        <div className="search-dropdown-content">
+                            <span>Search</span>
+                        </div>
                     </button>
                 </form>
 

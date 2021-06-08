@@ -1,0 +1,125 @@
+.video-form {
+    display: grid;
+    place-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color:rgb(116, 116, 116);
+    // padding-top: 4rem;
+}
+
+.video-form-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 55rem;
+    height: 46rem;
+    border-radius: 5px;
+    border: 1px solid rgb(183, 183, 183);
+    // justify-content: space-between;
+    background-color: white;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    overflow-y: scroll;
+    
+    h2 {
+        align-self: flex-start;
+        font-size: 1.3rem;
+        font-weight: 400;
+        margin-top: 6rem;
+        margin-bottom: 1rem;
+        margin-left: 2rem;
+    }
+    .video-form-main {
+        display: flex;
+        padding-bottom: 10rem;
+        height: 25rem;
+        // justify-content: space-between;
+        width: 100%;
+        // margin-left: 0.5rem;
+        // margin-right: 0.5rem;
+    }
+
+    .details {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        padding-left: 2rem;
+        padding-right: 1rem;
+    }
+
+
+    .video-label {
+        padding-right: 1rem;
+    }
+
+    .description-label {
+        // margin-right: 12rem;
+        font-size: 12px;
+        color: rgb(183, 183, 183);
+        &:hover {
+            border-color:rgb(135, 135, 135);
+        }
+    }
+    .title-label {
+        // margin-right: 12rem;
+        font-size: 12px;
+        color: rgb(183, 183, 183);
+        width: 30.25rem;
+        height: 3.5rem;
+        &:hover {
+            border-color:rgb(135, 135, 135);
+        }
+    }
+
+    label {
+        border-radius: 5px;
+        border: 1px solid rgb(213, 213, 213);
+        display: flex;
+        flex-direction: column;
+        padding: 0.8rem;
+        &:focus-within {
+            border: 1px solid rgb(68, 97, 155);
+        }
+    }
+    input {
+        border-style: none;
+        &:focus {
+            outline: none
+        }
+    }
+    textarea {
+        border-style: none;
+        resize: none;
+        width: 30rem;
+        height: 9rem;
+        overflow-y: scroll;
+        padding-top: 0.5rem;
+        &:focus { 
+            outline: none;
+        }
+    }
+    .upload-submit {
+        justify-self: flex-end;
+        align-self: flex-end;
+        margin-right: 2rem;
+        background-color: rgb(26, 115, 232);
+        border-radius: 4px;
+        color: white;
+        height: 36px;
+        width: 80px;
+        font-size: 12px;
+        font-weight: 300;
+        border-radius: 4px;
+        cursor: pointer;
+        border-color: white;
+        box-shadow: none;
+        box-sizing: border-box;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+// a {color: rgb(68, 97, 155)}
