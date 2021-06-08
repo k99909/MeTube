@@ -3,4 +3,5 @@ json.set! video.id do
     json.username video.uploader.username
     json.thumbnail url_for(video.thumbnail)
     json.uploadUrl url_for(video.upload)
+    json.comments video.comments.map {|comment| comment.id}
 end

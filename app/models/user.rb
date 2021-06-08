@@ -11,6 +11,10 @@ class User < ApplicationRecord
         foreign_key: :uploader_id,
         class_name: :Video
 
+    has_many :comments,
+        foreign_key: :author_id,
+        class_name: :Comment
+
     def self.find_by_credentials(username, password)
         user = User.find_by(username: username)
         return nil unless user
