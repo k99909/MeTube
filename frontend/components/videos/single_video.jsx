@@ -1,15 +1,12 @@
 import React from 'react';
 import Header from '../header/header';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import { FaUserAlt } from 'react-icons/fa';
+import VideoSidebarContainer from './video_sidebar_container';
 
 class SingleVideo extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            video_id: parseInt(this.props.match.params.videoId),
-            author_id: parseInt(this.props.currentUser)
-        } 
     }
 
     componentDidMount() {
@@ -17,10 +14,32 @@ class SingleVideo extends React.Component {
         console.log(this.props)
     }
 
+    componentDidUpdate() {
+        this.props.video ? null : this.props.fetchVideo(this.props.match.params.videoId)
+    }
+
+    handleDelete(e) {
+        e.preventDefault();
+        this.props.deleteVideo(this.props.videoId)
+    }
+
+    renderErrors() {
+        return (
+            <ul className="error-messages">
+                {this.props.errors.map((error, i) => {
+                    return <li key={`error-${i}`}>
+                        {error}
+                    </li>
+                })}
+            </ul>
+        )
+    }
+
     render() {
         return(
             <div className="video-show-page-whole">
                 {/* <Header /> */}
+                {this.props.errors.length ? <Redirect to="/404"/> : ''}
                 <div className="video-show-page">
                     {this.props.video ? 
                     <div className="video-show-container">
@@ -40,7 +59,12 @@ class SingleVideo extends React.Component {
                         </div>
                     </div>
                     : ''}
+                <VideoSidebarContainer/>
                 </div>
+               {/* {this.props.video.uploader_id === this.props.currentUser ? (
+                   <button className="video-delete" onClick={this.handleDelete}>Delete Video</button>
+               ) : ''
+               }          */}
             </div>
         )
     }

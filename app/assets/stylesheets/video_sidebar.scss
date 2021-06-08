@@ -1,0 +1,33 @@
+.video-sidebar {
+    width: 30%;
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    .sidebar-video-item {
+        width: 100%;
+        height: 10rem;
+        display: flex;
+        a:hover {
+            cursor: pointer;
+        }
+        .thumbnail img{
+            width: 15rem;
+            height: 90%;
+        }
+        .vid-sidebar-info {
+            padding-left: 1rem;
+            padding-top: 0.2rem;
+            p {
+                font-size: 16px;
+                font-weight: 500;
+                font-stretch: ultra-condensed;
+            }
+            span {
+                padding-top: 1.5rem;
+                font-size: 11px;
+                font-weight: 300;
+                font-stretch: ultra-condensed;
+            }
+        }
+    }
+}

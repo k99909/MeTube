@@ -9,15 +9,16 @@ const mSTP = (state, ownProps) => {
     return {
         video: video,
         // user: state.entities.users[video.uploader_id],
+        errors: state.errors.video,
         currentUser: state.session.currentUser,
-        state: state
+        videoId: parseInt(ownProps.match.params.videoId),
     }
 }
 
 const mDTP = dispatch => ({
     deleteVideo: videoId => dispatch(deleteVideo(videoId)),
     fetchVideo: videoId => dispatch(fetchVideo(videoId)),
-    updateVideo: video => dispatch(updateVideo(video)),
+    // updateVideo: video => dispatch(updateVideo(video)),
 })
 
 

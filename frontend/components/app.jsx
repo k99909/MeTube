@@ -9,6 +9,7 @@ import { Link, Redirect, Switch } from 'react-router-dom';
 import SingleVideoContainer from './videos/single_video_container';
 import Main from './main/main';
 import VideoFormContainer from './videos/video_form_container';
+import Errors from './errors_page'
 
 const App = props => (
         <div className="main-div">
@@ -21,6 +22,7 @@ const App = props => (
             <Route exact path="/create" render={(props) => <VideoFormContainer {...props} action='Upload Video'/>}/>
             <Route exact path="/" component={Main}/>
             <Route path="/watch/:videoId" component={SingleVideoContainer}/>
+            <Route exact path="/404" component={Errors}/>
             <Route render={() => <Redirect to={{ pathname: "" }} />} />
             </Switch>
         </div>

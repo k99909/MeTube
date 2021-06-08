@@ -64,7 +64,7 @@ class VideoForm extends React.Component {
             if(thumbnail) formData.append('video[thumbnail]', thumbnail);
             formData.append('video[id]', this.props.videoId);
             this.props.updateVideo(formData)
-        }
+        }''
     }
     render() {
         if (!this.props.currentUser) {

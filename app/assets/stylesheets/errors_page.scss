@@ -1,0 +1,32 @@
+.errors-page {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    .errors-page-text {
+        height: 40%;
+        color: rgb(130, 130, 130);
+        text-align: center;
+    }
+    h1 {
+        font-size: 3rem;
+        font-weight: 200;
+        font-stretch: extra-condensed;
+        padding-bottom: 5rem;
+    }
+    p {
+        font-size: 1rem;
+        font-weight: 200;
+        font-stretch: extra-condensed;
+        padding-bottom: 2rem;
+    }
+
+    a {
+        font-size: 0.8rem;
+        font-weight: 200;
+        font-stretch: extra-condensed;
+        color: rgb(115, 167, 200);
+        &:visited {
+            color: rgb(115, 167, 200);
+        }
+    }
+}

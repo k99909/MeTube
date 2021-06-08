@@ -6,6 +6,11 @@ class Api::VideosController < ApplicationController
 
     def show
         @video = Video.find_by(id: params[:id])
+        if @video 
+            render :show
+        else
+            render json: ["The video you are searching for does not exist"], status: 404
+        end
     end
 
     def update
