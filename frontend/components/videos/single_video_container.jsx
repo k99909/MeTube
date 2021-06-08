@@ -10,7 +10,7 @@ const mSTP = (state, ownProps) => {
         video: video,
         // user: state.entities.users[video.uploader_id],
         errors: state.errors.video,
-        currentUser: state.session.currentUser,
+        currentUser: state.session.id,
         videoId: parseInt(ownProps.match.params.videoId),
     }
 }

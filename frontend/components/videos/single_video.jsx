@@ -7,6 +7,7 @@ import VideoSidebarContainer from './video_sidebar_container';
 class SingleVideo extends React.Component {
     constructor(props) {
         super(props);
+        this.handleDelete = this.handleDelete.bind(this)
     }
 
     componentDidMount() {
@@ -40,13 +41,17 @@ class SingleVideo extends React.Component {
             <div className="video-show-page-whole">
                 {/* <Header /> */}
                 {this.props.errors.length ? <Redirect to="/404"/> : ''}
-                <div className="video-show-page">
                     {this.props.video ? 
+                <div className="video-show-page">
                     <div className="video-show-container">
                         <video className="video"src={this.props.video.uploadUrl} controls />
                         <div className="video-info-container">
                                 <p className="video-title">{this.props.video.title}</p>
                                 <p className="video-stats">{this.props.video.view_count} views • { this.props.video.created_at.slice(0,10) }</p>
+                    {this.props.video.uploader_id === this.props.currentUser ? (
+                        <button className="video-delete" onClick={this.handleDelete}>Delete Video</button>
+                    ) : ''
+                    }         
                         </div>
                         <div className="video-description-container">
                                 <div className="vid-index-prof">
@@ -54,17 +59,13 @@ class SingleVideo extends React.Component {
                                 </div>
                                 <div className="vid-show-prof-info">
                                     <p className="video-uploader">{this.props.video.username}</p>
-                                    {this.props.video.description ? <p className="vid-desc">this.props.video.description</p> : <p className="vid-desc">this video has no description</p>}
+                                    {this.props.video.description ? <p className="vid-desc">{this.props.video.description}</p> : <p className="vid-desc">this video has no description</p>}
                                 </div>
                         </div>
                     </div>
-                    : ''}
                 <VideoSidebarContainer/>
                 </div>
-               {/* {this.props.video.uploader_id === this.props.currentUser ? (
-                   <button className="video-delete" onClick={this.handleDelete}>Delete Video</button>
-               ) : ''
-               }          */}
+                    : ''}
             </div>
         )
     }

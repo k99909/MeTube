@@ -8,12 +8,12 @@ import { FaUserAlt } from 'react-icons/fa'
 
 const Greeting = ({ currentUser, logout }) => {
     const sessionLinks = () => (
-        <nav className="login-signup" id="signin-topright">
+        <Link to="/login" className="login-signup" id="signin-topright">
             <div className="vid-index-prof">
                 <FaUserAlt color={'white'} size={15}/>
             </div>
             <Link to="/login">SIGN IN</Link>
-        </nav>
+        </Link>
     );
 
     const dropdownClick = (e) => {
