@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import VideoSidebar from './video_sidebar';
-import {withRouter} from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import { fetchVideos } from '../../actions/video_actions';
 
 const mSTP = (state, ownProps) => ({

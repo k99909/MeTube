@@ -15,7 +15,7 @@
             }
             .video-info-container {
                 height: 5rem;
-                padding-top: 0.6rem;
+                padding-top: 1rem;
                 display: grid;
                 grid-template-columns: 50% 50%;
                 grid-template-rows: 60% 40%;
@@ -38,7 +38,7 @@
 .video-description-container {
     padding-top: 1rem;
     display: flex;
-    height: 10vh;
+    height: 8rem;
     border-bottom: 0.1px solid rgba(211, 211, 211, 0.859);
 }
 
@@ -47,12 +47,13 @@
     padding-left: 1rem;
 
     .video-uploader {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
         font-weight: 400;
     }
 
     .vid-desc {
         padding-top: 1.5rem;
-        font-size: 0.65rem;
+        font-size: 0.75rem;
+        font-weight: 300;
     }
 }

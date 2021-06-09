@@ -3,6 +3,7 @@ import Header from '../header/header';
 import { Link, Redirect } from 'react-router-dom';
 import { FaUserAlt } from 'react-icons/fa';
 import VideoSidebarContainer from './video_sidebar_container';
+import CommentsContainer from '../comments/comments_container';
 
 class SingleVideo extends React.Component {
     constructor(props) {
@@ -50,7 +51,7 @@ class SingleVideo extends React.Component {
                                 <p className="video-stats">{this.props.video.view_count} views • { this.props.video.created_at.slice(0,10) }</p>
                     {this.props.video.uploader_id === this.props.currentUser ? (
                         <button className="video-delete" onClick={this.handleDelete}>Delete Video</button>
-                    ) : ''
+                        ) : ''
                     }         
                         </div>
                         <div className="video-description-container">
@@ -62,6 +63,7 @@ class SingleVideo extends React.Component {
                                     {this.props.video.description ? <p className="vid-desc">{this.props.video.description}</p> : <p className="vid-desc">this video has no description</p>}
                                 </div>
                         </div>
+                    <CommentsContainer videoId={this.props.video.id}/>
                     </div>
                 <VideoSidebarContainer/>
                 </div>

@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
-import usersReducer from './users_reducer';
-import videosReducer from './videos_reducer.js'
+import users from './users_reducer';
+import videos from './videos_reducer.js'
+import comments from './comments_reducer'
 
 export default combineReducers({
-    users: usersReducer,
-    videos: videosReducer
+    users,
+    videos,
+    comments
 })
