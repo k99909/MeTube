@@ -2,27 +2,73 @@ import React from 'react';
 import Header from '../header/header';
 import { Link, Redirect } from 'react-router-dom';
 import { FaUserAlt } from 'react-icons/fa';
+import { FiThumbsDown, FiThumbsUp } from 'react-icons/fi';
 import VideoSidebarContainer from './video_sidebar_container';
 import CommentsContainer from '../comments/comments_container';
 
 class SingleVideo extends React.Component {
     constructor(props) {
         super(props);
-        this.handleDelete = this.handleDelete.bind(this)
+        this.handleDelete = this.handleDelete.bind(this);
+        this.handleLike = this.handleLike.bind(this);
+        this.handleDislike = this.handleDislike.bind(this);
+        this.userLikesVideo = this.userLikesVideo.bind(this);
     }
 
     componentDidMount() {
         this.props.fetchVideo(this.props.match.params.videoId)
-        console.log(this.props)
+        this.props.fetchLikes(this.props.match.params.videoId)
+        console.log('likes: ', this.props.likes)
     }
 
     componentDidUpdate() {
-        this.props.video ? null : this.props.fetchVideo(this.props.match.params.videoId)
+        if (!this.props.video)
+           {
+            this.props.fetchVideo(this.props.match.params.videoId);
+            this.props.fetchLikes(this.props.match.params.videoId)
+            console.log('update likes:', this.props.likes)
+        } else {
+            console.log('likes then video likes length: ', this.props.likes.length, this.props.video.likes.length)
+        if (this.props.likes.length != this.props.video.likes.length) {
+            console.log(this.props.video.likes.length)
+            // if (this.props.likes[0].video_id != this.props.match.params.videoId) {
+                this.props.fetchLikes(this.props.match.params.videoId)
+            // }
+        } else {if (this.props.likes.length > 0) {
+            if (this.props.likes[0].video_id != this.props.match.params.videoId) {
+                this.props.fetchLikes(this.props.match.params.videoId)
+            }
+        }}}
+
     }
 
     handleDelete(e) {
         e.preventDefault();
         this.props.deleteVideo(this.props.videoId)
+    }
+
+    handleLike(e) {
+        e.preventDefault();
+        let currentUserVidLike = this.props.likes.filter(like => like.liker_id === this.props.currentUser)
+        currentUserVidLike.length > 0 ? this.props.deleteLike(currentUserVidLike[0].id) : null;
+        this.props.postLike({liker_id: this.props.currentUser, video_id: this.props.match.params.videoId, like_type: true})
+        this.props.fetchVideo(this.props.match.params.videoId)
+    }
+
+    handleDislike(e) {
+        e.preventDefault();
+        let currentUserVidLike = this.props.likes.filter(like => like.liker_id === this.props.currentUser)
+        currentUserVidLike.length > 0 ? this.props.deleteLike(currentUserVidLike[0].id) : null;
+        this.props.postLike({ liker_id: this.props.currentUser, video_id: this.props.match.params.videoId, like_type: false })     
+        this.props.fetchVideo(this.props.match.params.videoId);
+    }
+
+    userLikesVideo() {
+        return this.props.likes.filter(like => like.liker_id === this.props.currentUser && like.like_type).length > 0
+    }
+
+    userDislikesVideo() {
+        return this.props.likes.filter(like => like.liker_id === this.props.currentUser && !like.like_type).length > 0
     }
 
     renderErrors() {
@@ -52,8 +98,20 @@ class SingleVideo extends React.Component {
                     {this.props.video.uploader_id === this.props.currentUser ? (
                         <button className="video-delete" onClick={this.handleDelete}>Delete Video</button>
                         ) : ''
-                    }         
-                        </div>
+                    }
+                    <div className="video-buttons">
+                        <div className={this.userLikesVideo() || this.userDislikesVideo() ? "likes-container liked" : "likes-container"}>
+                            <div className={this.userLikesVideo() ? "positive-likes liked" : "positive-likes"} onClick={this.handleLike}>
+                                <FiThumbsUp size={30} />
+                                <span>{this.props.likes.filter(like => like.like_type).length}</span>
+                            </div>
+                            <div className={this.userDislikesVideo() ? "negative-likes liked" : "negative-likes"} onClick={this.handleDislike}>
+                                <FiThumbsDown size={30} />    
+                                <span>{this.props.likes.filter(like => !like.like_type).length}</span>
+                            </div>
+                        </div>         
+                    </div>
+                    </div>
                         <div className="video-description-container">
                                 <div className="vid-index-prof">
                                     <FaUserAlt color={'white'} />

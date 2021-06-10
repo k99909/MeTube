@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaUserAlt } from 'react-icons/fa';
+import { BsThreeDotsVertical } from 'react-icons/bs';
 import { withRouter } from 'react-router-dom';
 
 class Comments extends React.Component {
@@ -39,6 +40,15 @@ class Comments extends React.Component {
         this.setState({body: ''});
     }
 
+    handleDelete(commentId) {
+        this.props.deleteComment(commentId);
+    }
+
+    dropdownClick(e) {
+        e.preventDefault();
+        document.getElementById("comment-dropdown").classList.toggle("show");
+    }
+    
     renderErrors() {
         return (
             <ul>
@@ -93,6 +103,12 @@ class Comments extends React.Component {
                                 <span className="comment-author">{comment.author}</span>
                                 <p className="comment-body">{comment.body}</p>
                              </div>
+                             {/* <div className="dropbtn" onClick={this.dropdownClick}>
+                                 <BsThreeDotsVertical size={23} color={'lightgray'}/>
+                             </div> */}
+                                 {/* <div className="dropdown-content" id="comment-dropdown"> */}
+                             { this.props.currentUser === comment.author_id ? <button onClick={() => this.handleDelete(comment.id)}>Delete Comment</button> : ''}
+                                 {/* </div> */}
                              </li>
                      }).reverse()}
                  </ul>

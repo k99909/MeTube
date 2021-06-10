@@ -9,14 +9,14 @@ class Comment < ApplicationRecord
         foreign_key: :author_id,
         class_name: :User
 
-    belongs_to :parent,
-        class_name: :Comment,
-        optional: :current_user
+    # belongs_to :parent,
+    #     class_name: :Comment,
+    #     optional: :current_user
 
-    has_many :replies,
-    foreign_key: :parent_id,
-    class_name: :comment,
-    dependent: :destroy
+    # has_many :replies,
+    #     foreign_key: :parent_id,
+    #     class_name: :comment,
+    #     dependent: :destroy
 
 
 end

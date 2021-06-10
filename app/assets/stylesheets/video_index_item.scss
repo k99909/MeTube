@@ -17,6 +17,9 @@
     span {
         font-size: 0.75rem;
         padding-bottom: 1rem;
+        &.index-username {
+            padding-bottom: 0;
+        }
     }
     .vid-index-info {
         height: 6rem;

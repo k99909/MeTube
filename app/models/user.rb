@@ -15,6 +15,14 @@ class User < ApplicationRecord
         foreign_key: :author_id,
         class_name: :Comment
 
+    has_many :likes,
+        foreign_key: :liker_id,
+        class_name: :Like
+
+    has_many :liked_videos,
+        through: :likes,
+        source: :video
+
     def self.find_by_credentials(username, password)
         user = User.find_by(username: username)
         return nil unless user

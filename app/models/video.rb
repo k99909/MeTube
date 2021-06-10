@@ -9,6 +9,10 @@ class Video < ApplicationRecord
         foreign_key: :video_id,
         class_name: :Comment
 
+    has_many :likes,
+        foreign_key: :video_id,
+        class_name: :Like
+
     has_one_attached :thumbnail
 
     has_one_attached :upload

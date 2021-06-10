@@ -33,7 +33,12 @@ class VideoItem extends React.Component {
                     <Link to={`/watch/${this.props.video.id}`}>
                     <div className="vid-index-text">
                         <p>{this.props.video.title}</p>
-                        <span>{this.props.video.username}</span>
+                        <span className="index-username">
+                        {this.props.video.username}
+                        </span>
+                        <span className="index-view-count">
+                        {this.props.video.view_count} views
+                        </span>
                     </div>
                     </Link>
                 </div>

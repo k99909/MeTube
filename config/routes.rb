@@ -6,8 +6,10 @@ Rails.application.routes.draw do
     resource :session, only: [:create, :destroy]
     resources :videos do 
       resources :comments, only: [:index]
+      resources :likes, only: [:index]
     end
     resources :comments, only: [:create, :update, :destroy]
+    resources :likes, only: [:create, :update, :destroy]
   end
   
   root to:

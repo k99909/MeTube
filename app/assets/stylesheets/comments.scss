@@ -85,16 +85,49 @@
 }
 
 .comments-display-box {
-    padding-top: 1rem;
+    padding-top: 2rem;
     .single-comment-display {
         display: flex;
         height: 5rem;
         overflow-y: hidden;
-        
+        button {
+            display: none;
+            width: 5rem;
+            height: 2rem;
+            font-size: 10px;
+            border: none;
+            border-radius: 2px;
+            background-color: rgb(205, 205, 205);
+        }
+        .dropbtn {
+            display: none;
+            justify-self: flex-end;
+            // position: absolute;
+            // right: 30%;
+        }
+        &:hover button {
+            display: block;
+            &:hover { 
+                background-color: rgb(206, 66, 63);
+                color: white;
+            }
+        }
+        &:focus .dropbtn {
+            display: block;
+        }
+        .dropdown-content {
+            display: none;
+            &.show {
+                display: block;
+                p {
+                    display: block;
+                }
+            }
+        }
         .single-comment-main {
             padding-left: 0.8rem;
-            padding-top: 0.25rem;
-            
+            padding-top: 0.3rem;
+            width: 80%;
             span {
                 font-size: 0.9rem;
                 font-weight: 400;

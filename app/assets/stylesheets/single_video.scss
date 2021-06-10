@@ -9,6 +9,58 @@
             padding: 2rem;
             width: 75vw;
             // height: auto;
+            .video-delete {
+                grid-row: 1;
+                grid-column: 2;
+            }
+
+            .video-buttons {
+                grid-row: 2;
+                grid-column: 2;
+                display: flex;
+                justify-content: center;
+                cursor: pointer;
+                .likes-container {
+                    justify-self: center;
+                    display: flex;
+                    // margin-left: 35%;
+                    width: 6rem;
+                    border-bottom: 2px solid rgba(89, 89, 89, 0.859);
+                    justify-content: space-between;
+                    padding-left: 0.5rem;
+                    padding-right: 0.5rem;
+                    padding-bottom: 1rem;
+                    .positive-likes {
+                        display: flex;
+                        align-items: center;
+                    }
+                    .negative-likes {
+                        display: flex;
+                    }
+                    span {
+                        font-size: 14px;
+                        padding-left: 5px;
+                        padding-top: 5px;
+                        font-weight: 400px;
+                        letter-spacing: 0.5px;
+                        font-stretch: extra-expanded;
+                    }
+                    svg {
+                        stroke: white;
+                        fill: rgba(130, 130, 130, 0.859);
+                    }
+                    &.liked {
+                        border-bottom: 2px solid rgba(45, 98, 154, 0.859);
+                    }
+                    .liked {
+                        color: rgba(45, 98, 154, 0.859); 
+                        svg {
+                            fill: rgba(45, 98, 154, 0.859); 
+                        }
+                    }
+                }
+            }
+
             .video {
                 width: 100%;
                 // height: 
@@ -18,7 +70,7 @@
                 padding-top: 1rem;
                 display: grid;
                 grid-template-columns: 50% 50%;
-                grid-template-rows: 60% 40%;
+                grid-template-rows: 50% 50%;
                 border-bottom: 0.1px solid rgba(211, 211, 211, 0.859);
             }
             .video-title {
@@ -27,6 +79,7 @@
                 font-stretch: extra-expanded;
             }
             .video-stats {
+                padding-top: 1rem;
                 grid-row: 2;
                 grid-column: 1;
                 font-size: 0.8rem;
