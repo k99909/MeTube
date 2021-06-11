@@ -26,18 +26,14 @@ class SingleVideo extends React.Component {
            {
             this.props.fetchVideo(this.props.match.params.videoId);
             this.props.fetchLikes(this.props.match.params.videoId)
-            console.log('update likes:', this.props.likes)
         } else {
             console.log('likes then video likes length: ', this.props.likes.length, this.props.video.likes.length)
-        if (this.props.likes.length != this.props.video.likes.length) {
-            console.log(this.props.video.likes.length)
-            // if (this.props.likes[0].video_id != this.props.match.params.videoId) {
+            if (this.props.likes.length != this.props.video.likes.length) {
                 this.props.fetchLikes(this.props.match.params.videoId)
-            // }
-        } else {if (this.props.likes.length > 0) {
-            if (this.props.likes[0].video_id != this.props.match.params.videoId) {
-                this.props.fetchLikes(this.props.match.params.videoId)
-            }
+            } else {if (this.props.likes.length > 0) {
+                if (this.props.likes[0].video_id != this.props.match.params.videoId) {
+                    this.props.fetchLikes(this.props.match.params.videoId)
+                }
         }}}
 
     }
