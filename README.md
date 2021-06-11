@@ -4,6 +4,8 @@ What is MeTube?
 
 MeTube is a clone of YouTube, the world's most popular video sharing social media site. In this application, users are able to watch and interact with videos from other users around the world, along with upload videos of their own.
 
+In MeTube, users are able to create accounts, comment on videos, upload videos, and like or dislike videos.
+
 https://metubeclone.herokuapp.com/#/
 
 The technologies used in this project include Ruby on Rails, React, Redux, JavaScript, jQuery, JSX, postgreSQL and heroku app.
