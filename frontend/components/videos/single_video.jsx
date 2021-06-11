@@ -49,6 +49,7 @@ class SingleVideo extends React.Component {
 
     handleLike(e) {
         e.preventDefault();
+        if (!this.props.currentUser) return <p>You must be logged in to like a video</p>
         let currentUserVidLike = this.props.likes.filter(like => like.liker_id === this.props.currentUser)
         currentUserVidLike.length > 0 ? this.props.deleteLike(currentUserVidLike[0].id) : null;
         this.props.postLike({liker_id: this.props.currentUser, video_id: this.props.match.params.videoId, like_type: true})
@@ -57,6 +58,7 @@ class SingleVideo extends React.Component {
 
     handleDislike(e) {
         e.preventDefault();
+        if (!this.props.currentUser) return <p>You must be logged in to dislike a video</p>
         let currentUserVidLike = this.props.likes.filter(like => like.liker_id === this.props.currentUser)
         currentUserVidLike.length > 0 ? this.props.deleteLike(currentUserVidLike[0].id) : null;
         this.props.postLike({ liker_id: this.props.currentUser, video_id: this.props.match.params.videoId, like_type: false })     
@@ -69,6 +71,11 @@ class SingleVideo extends React.Component {
 
     userDislikesVideo() {
         return this.props.likes.filter(like => like.liker_id === this.props.currentUser && !like.like_type).length > 0
+    }
+
+    notLoggedIn(e) {
+        e.preventDefault();
+        document.getElementById("not-logged-in-error").classList.toggle('show');
     }
 
     renderErrors() {
@@ -99,13 +106,14 @@ class SingleVideo extends React.Component {
                         <button className="video-delete" onClick={this.handleDelete}>Delete Video</button>
                         ) : ''
                     }
+                    <p id="not-logged-in-error" className="not-logged-in-error">You must be logged in to do this action</p>
                     <div className="video-buttons">
                         <div className={this.userLikesVideo() || this.userDislikesVideo() ? "likes-container liked" : "likes-container"}>
-                            <div className={this.userLikesVideo() ? "positive-likes liked" : "positive-likes"} onClick={this.handleLike}>
+                            <div className={this.userLikesVideo() ? "positive-likes liked" : "positive-likes"} onClick={this.props.currentUser ? this.handleLike : this.notLoggedIn}>
                                 <FiThumbsUp size={30} />
                                 <span>{this.props.likes.filter(like => like.like_type).length}</span>
                             </div>
-                            <div className={this.userDislikesVideo() ? "negative-likes liked" : "negative-likes"} onClick={this.handleDislike}>
+                            <div className={this.userDislikesVideo() ? "negative-likes liked" : "negative-likes"} onClick={this.props.currentUser ? this.handleDislike : this.notLoggedIn}>
                                 <FiThumbsDown size={30} />    
                                 <span>{this.props.likes.filter(like => !like.like_type).length}</span>
                             </div>
