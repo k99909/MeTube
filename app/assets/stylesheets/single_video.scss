@@ -11,10 +11,12 @@
             // height: auto;
             .not-logged-in-error {
                 display: none;
+                justify-self: center;
                 border: 1px solid red;
                 text-align: center;
-                width: 6rem;
-                height: 1rem;
+                width: 10rem;
+                height: 2rem;
+                font-size: 10px;
                 &.show {
                     display: block;
                 }

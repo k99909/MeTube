@@ -16,68 +16,31 @@ User.destroy_all
 
 users = User.create([    
     {username: 'demo_user', password: 'demo123'},
-    {username: 'kaz', password: 'kazkaz'}
+    {username: 'kaz', password: 'kazkaz'},
+    {username: 'Lebron James', password: 'lebronlebron'},
+    {username: 'Mac Miller', password: 'macmac'},
+    {username: 'World Of Dance', password: 'worldofdance'}
 ])
 
 videos = Video.create([
     {
-        view_count: 10000, 
-        title: 'video1', 
-        uploader_id: User.find_by_credentials('kaz', 'kazkaz').id    
+        view_count: 12345, 
+        title: 'Bluprint World of Dance WOD Atlanta 2018', 
+        uploader_id: User.find_by_credentials('World Of Dance', 'worldofdance').id    
     },
     {
-        view_count: 10000, 
-        title: 'video2', 
-        uploader_id: User.find_by_credentials('kaz', 'kazkaz').id    
+        view_count: 25345, 
+        title: 'LeBron James BEST Career Dunks!', 
+        uploader_id: User.find_by_credentials('Lebron James', 'lebronlebron').id    
     },
     {
-        view_count: 10000, 
-        title: 'video3', 
-        uploader_id: User.find_by_credentials('kaz', 'kazkaz').id    
+        view_count: 65463, 
+        title: 'Woods | Mac Miller', 
+        uploader_id: User.find_by_credentials('Mac Miller', 'macmac').id    
     },
     {
-        view_count: 10000, 
-        title: 'video4', 
-        uploader_id: User.find_by_credentials('kaz', 'kazkaz').id    
-    },
-    {
-        view_count: 10000, 
-        title: 'video5', 
-        uploader_id: User.find_by_credentials('kaz', 'kazkaz').id    
-    },
-    {
-        view_count: 10000, 
-        title: 'video6', 
-        uploader_id: User.find_by_credentials('kaz', 'kazkaz').id    
-    },
-    {
-        view_count: 10000, 
-        title: 'video7', 
-        uploader_id: User.find_by_credentials('kaz', 'kazkaz').id    
-    },
-    {
-        view_count: 10000, 
-        title: 'video8', 
-        uploader_id: User.find_by_credentials('kaz', 'kazkaz').id    
-    },
-    {
-        view_count: 10000, 
-        title: 'video9', 
-        uploader_id: User.find_by_credentials('kaz', 'kazkaz').id    
-    },
-    {
-        view_count: 10000, 
-        title: 'video10', 
-        uploader_id: User.find_by_credentials('kaz', 'kazkaz').id    
-    },
-    {
-        view_count: 10000, 
-        title: 'video11', 
-        uploader_id: User.find_by_credentials('kaz', 'kazkaz').id    
-    },
-    {
-        view_count: 10000, 
-        title: 'video12', 
+        view_count: 76456, 
+        title: '1 minute of beautiful scenery', 
         uploader_id: User.find_by_credentials('kaz', 'kazkaz').id    
     }
 ])
@@ -85,7 +48,21 @@ videos = Video.create([
 thumbnail = 'https://active-storage-metube-dev.s3-us-west-1.amazonaws.com/thumbnail.png'
 videoUrl = 'https://active-storage-metube-dev.s3-us-west-1.amazonaws.com/testvid.mov'
 
-Video.all.each do |video| 
-    video.thumbnail.attach(io: open(thumbnail), filename: 'thumbnail.png')
-    video.upload.attach(io: open(videoUrl), filename: 'testvid.mov')
+videoUrls = [
+    "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/bluprint.mp4",
+    "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/lebron.mp4",
+    "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/mac_miller_woods.mp4",
+    "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/scenery.mp4"
+]
+
+thumbnails = [
+    "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/bluprint_thumbnail.jpg",
+    "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/lebron_thumbnail.jpg",
+    "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/mac_thumbnail.jpg",
+    "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/scenery_thumbnail.jpg"
+]
+
+Video.all.each_with_index do |video, i| 
+    video.thumbnail.attach(io: open(thumbnails[i]), filename: "#{thumbnails[i].split('/').last}")
+    video.upload.attach(io: open(videoUrls[i]), filename: "#{videoUrls[i].split('/').last}")
 end
