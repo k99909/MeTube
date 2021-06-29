@@ -4,24 +4,29 @@ import {
     MdExitToApp,
     MdHistory,
     MdHome,
-} from 'react-icons/md'
+} from 'react-icons/md';
+import {
+    AiFillGithub,
+    AiFillLinkedin
+} from 'react-icons/ai';
+import { FaAngellist } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const Sidebar = ({currentUser, logout, homePage}) => {
     return (
         <nav className={homePage ? "sidebar" : "sidebar hidden"} id="sidebar-menu">
-            <li>
-                <MdHome size={23} />
-                <span>Home</span>
-            </li>
-            <li>
-                <MdSubscriptions size={23} />
-                <span>Subscriptions</span>
-            </li>
-            <li>
-                <MdHistory size={23} />
-                <span>History</span>
-            </li>
+            <a href="https://github.com/k99909"><li>
+                <AiFillGithub size={23} />
+                <span>Github</span>
+            </li></a>
+            <a href="https://www.linkedin.com/in/kaz-debear-66a6b8172/"><li>
+                <AiFillLinkedin size={23} />
+                <span>LinkedIn</span>
+            </li></a>
+            <a href="https://angel.co/u/kazuki-debear"><li>
+                <FaAngellist size={23} />
+                <span>Angel List</span>
+            </li></a>
             { currentUser ? 
                 <li onClick={logout}>
                     <MdExitToApp size={23} />
