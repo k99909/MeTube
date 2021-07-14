@@ -1,0 +1,9 @@
+.video-index-grid {
+  display: -ms-grid;
+  display: grid;
+  width: 100%;
+  -ms-grid-columns: 25% 25% 25% 25%;
+      grid-template-columns: 25% 25% 25% 25%;
+  padding: 2rem;
+}
+/*# sourceMappingURL=video_index.css.map */

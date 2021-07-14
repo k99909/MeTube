@@ -1,0 +1,166 @@
+.comment-box {
+  padding-top: 1.75rem;
+}
+
+.comment-count {
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-stretch: ultra-condensed;
+  padding-bottom: 1.5rem;
+}
+
+.comment-form-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.comment-form-div svg {
+  cursor: default;
+}
+
+.comment-form-div .vid-index-prof {
+  cursor: default;
+}
+
+.comment-form-body {
+  padding-bottom: 10px;
+}
+
+.comment-form {
+  padding-left: 0.8rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 50% 50%;
+      grid-template-rows: 50% 50%;
+  width: 100%;
+  height: 3.5rem;
+}
+
+.comment-form .border-underline {
+  -webkit-transition: all 100ms linear;
+  transition: all 100ms linear;
+  width: 0px;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  border-bottom: 2px solid black;
+  margin: 0;
+}
+
+.comment-form .active-input {
+  border-bottom: 3px solid black;
+}
+
+.comment-form .comment-form-input {
+  border: none;
+  border-bottom: 1px solid #9a9a9a;
+  -ms-grid-row: 1;
+  grid-row: 1;
+  width: 100%;
+}
+
+.comment-form .comment-form-input:focus {
+  outline: none;
+  -webkit-transition: ease-out all;
+  transition: ease-out all;
+  border-bottom: 2px solid black;
+}
+
+.comment-form .comment-form-submit {
+  justify-self: flex-end;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 6.4rem;
+  height: 2rem;
+  background-color: #4747e1;
+  color: white;
+  border-style: none;
+  font-size: 13px;
+  font-stretch: extra-condensed;
+  letter-spacing: 0.5px;
+  font-weight: 300;
+  border-radius: 1px;
+  cursor: pointer;
+}
+
+.comment-form .comment-form-submit:active {
+  outline: blue;
+}
+
+.comment-form .comment-form-submit.empty {
+  background-color: #eaeaea;
+  color: gray;
+  cursor: default;
+}
+
+.comments-display-box {
+  padding-top: 2rem;
+}
+
+.comments-display-box .single-comment-display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 5rem;
+  overflow-y: hidden;
+}
+
+.comments-display-box .single-comment-display button {
+  display: none;
+  width: 5rem;
+  height: 2rem;
+  font-size: 10px;
+  border: none;
+  border-radius: 2px;
+  background-color: #cdcdcd;
+}
+
+.comments-display-box .single-comment-display .dropbtn {
+  display: none;
+  justify-self: flex-end;
+}
+
+.comments-display-box .single-comment-display:hover button {
+  display: block;
+}
+
+.comments-display-box .single-comment-display:hover button:hover {
+  background-color: #ce423f;
+  color: white;
+}
+
+.comments-display-box .single-comment-display:focus .dropbtn {
+  display: block;
+}
+
+.comments-display-box .single-comment-display .dropdown-content {
+  display: none;
+}
+
+.comments-display-box .single-comment-display .dropdown-content.show {
+  display: block;
+}
+
+.comments-display-box .single-comment-display .dropdown-content.show p {
+  display: block;
+}
+
+.comments-display-box .single-comment-display .single-comment-main {
+  padding-left: 0.8rem;
+  padding-top: 0.3rem;
+  width: 80%;
+}
+
+.comments-display-box .single-comment-display .single-comment-main span {
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.comments-display-box .single-comment-display .single-comment-main p {
+  padding-top: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 300;
+}
+/*# sourceMappingURL=comments.css.map */

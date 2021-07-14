@@ -1,0 +1,38 @@
+.errors-page {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.errors-page .errors-page-text {
+  height: 40%;
+  color: #828282;
+  text-align: center;
+}
+
+.errors-page h1 {
+  font-size: 3rem;
+  font-weight: 200;
+  font-stretch: extra-condensed;
+  padding-bottom: 5rem;
+}
+
+.errors-page p {
+  font-size: 1rem;
+  font-weight: 200;
+  font-stretch: extra-condensed;
+  padding-bottom: 2rem;
+}
+
+.errors-page a {
+  font-size: 0.8rem;
+  font-weight: 200;
+  font-stretch: extra-condensed;
+  color: #73a7c8;
+}
+
+.errors-page a:visited {
+  color: #73a7c8;
+}
+/*# sourceMappingURL=errors_page.css.map */

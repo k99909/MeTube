@@ -1,0 +1,64 @@
+.video-index-item {
+  width: 100%;
+}
+
+.video-index-item .thumbnail {
+  height: auto;
+  width: 100%;
+}
+
+.video-index-item .thumbnail img {
+  display: block;
+  width: 90%;
+  height: auto;
+}
+
+.video-index-item p {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.video-index-item span {
+  font-size: 0.75rem;
+  padding-bottom: 1rem;
+}
+
+.video-index-item span.index-username {
+  padding-bottom: 0;
+}
+
+.video-index-item .vid-index-info {
+  height: 6rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.video-index-item .vid-index-text {
+  height: 100%;
+  padding-left: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  cursor: pointer;
+}
+
+.vid-index-prof {
+  margin-top: 0.3rem;
+  width: 30px;
+  line-height: 34px;
+  border-radius: 50%;
+  text-align: center;
+  background-color: black;
+  cursor: pointer;
+  color: white;
+  height: 30px;
+}
+/*# sourceMappingURL=video_index_item.css.map */

@@ -1,0 +1,63 @@
+.app-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 4rem;
+}
+
+.sidebar.show {
+  border: none;
+  border-right: 1px solid lightgray;
+  height: 100vh;
+  width: 12rem;
+}
+
+.sidebar.show li {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1.32rem;
+  padding-left: 1.6rem;
+  cursor: pointer;
+}
+
+.sidebar.show li span {
+  display: block;
+  margin-left: 1rem;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+}
+
+.sidebar.show li:hover {
+  background-color: lightgray;
+}
+
+.sidebar {
+  padding-top: 2rem;
+  border: none;
+  border-right: 1px solid lightgray;
+  height: 90vh;
+  width: 5rem;
+}
+
+.sidebar li {
+  list-style: none;
+  padding: 1.32rem;
+  padding-bottom: 1.09rem;
+  cursor: pointer;
+  text-align: center;
+}
+
+.sidebar li span {
+  display: none;
+}
+
+.sidebar li:hover {
+  background-color: lightgray;
+}
+/*# sourceMappingURL=sidebar.css.map */

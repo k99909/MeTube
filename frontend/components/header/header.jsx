@@ -3,6 +3,7 @@ import GreetingContainer from './greeting_container';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch, faBars } from '@fortawesome/fontawesome-free-solid';
+import logo from '../../assets/images/logo.png';
 
 class Header extends React.Component {
     constructor(props) {
@@ -21,7 +22,7 @@ class Header extends React.Component {
                 <FontAwesomeIcon icon={faBars} className="sidebar-icon" onClick={this.sidebarClick}/>
 
                 <Link to="/" className="header-link">
-                    <h2>MeTube</h2>
+                    <img src={logo} alt="logo" />
                 </Link>
 
                 <form className="search-bar">

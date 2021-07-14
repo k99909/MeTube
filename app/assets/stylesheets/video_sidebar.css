@@ -1,0 +1,47 @@
+.video-sidebar {
+  width: 30%;
+  padding-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.video-sidebar .sidebar-video-item {
+  width: 100%;
+  height: 10rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.video-sidebar .sidebar-video-item a:hover {
+  cursor: pointer;
+}
+
+.video-sidebar .sidebar-video-item .thumbnail img {
+  width: 15rem;
+  height: 90%;
+}
+
+.video-sidebar .sidebar-video-item .vid-sidebar-info {
+  padding-left: 1rem;
+  padding-top: 0.2rem;
+}
+
+.video-sidebar .sidebar-video-item .vid-sidebar-info p {
+  font-size: 16px;
+  font-weight: 500;
+  font-stretch: ultra-condensed;
+}
+
+.video-sidebar .sidebar-video-item .vid-sidebar-info span {
+  padding-top: 1.5rem;
+  font-size: 11px;
+  font-weight: 300;
+  font-stretch: ultra-condensed;
+}
+/*# sourceMappingURL=video_sidebar.css.map */
