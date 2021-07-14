@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch, faBars } from '@fortawesome/fontawesome-free-solid';
 
+const logoSrc = require('../../assets/images/logo.png');
+
 class Header extends React.Component {
     constructor(props) {
         super(props)
@@ -21,7 +23,7 @@ class Header extends React.Component {
                 <FontAwesomeIcon icon={faBars} className="sidebar-icon" onClick={this.sidebarClick}/>
 
                 <Link to="/" className="header-link">
-                    <img src={require('../../assets/images/logo.png')} alt="logo" />
+                    <img src={imgSrc} alt="logo" />
                 </Link>
 
                 <form className="search-bar">
