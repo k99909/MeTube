@@ -1,6 +1,6 @@
 import React from 'react';
 import GreetingContainer from './greeting_container';
-import { Link } from 'react-router-dom';
+import { Link, Redirect, withRouter } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch, faBars } from '@fortawesome/fontawesome-free-solid';
 
@@ -21,8 +21,8 @@ class Header extends React.Component {
     }
 
     search(e) {
-        e.preventDefault;
-        <Link to={`/?s=${this.state.search}/`}/>
+        e.preventDefault();
+        window.location.href=`?s=${this.state.search}#/`;
     }
 
     updateSearch(e) {
@@ -34,13 +34,13 @@ class Header extends React.Component {
             <header className="header">
                 <FontAwesomeIcon icon={faBars} className="sidebar-icon" onClick={this.sidebarClick}/>
 
-                <Link to="/" className="header-link">
-                    <img src='https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/logo.png' alt="logo" className="logo" />
-                </Link>
+                <a href="/#/" className="header-link" replace>
+                    <img src='https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/logo.png' alt="logo" className="logo"/>
+                </a>
 
-                <form className="search-bar">
+                <form className="search-bar" onSubmit={this.search}>
                     <input type="text" placeholder="Search" name="s" onChange={this.updateSearch}/>
-                    <button className="search-button" type='submit' onSubmit={this}>
+                    <button className="search-button" type="submit">
                         <FontAwesomeIcon icon={faSearch}/>
                         <div className="search-dropdown-content">
                             <span>Search</span>
@@ -54,4 +54,4 @@ class Header extends React.Component {
     }
 }
 
-export default Header;
+export default withRouter(Header);
