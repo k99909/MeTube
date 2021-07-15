@@ -180,6 +180,8 @@ hgroup .dropbtn {
   border-width: 0.5px;
   border-radius: 3px;
   border: none;
+  padding-left: 0.5rem;
+  letter-spacing: 1.2px;
 }
 
 .search-bar input:focus {
@@ -255,5 +257,14 @@ hgroup .dropbtn {
 .create-dropdown:hover .create-dropdown-content, .search-button:hover .search-dropdown-content {
   display: block;
   opacity: 100%;
+}
+
+.logo {
+  height: 2rem;
+  padding-top: 5px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 /*# sourceMappingURL=header.css.map */
