@@ -13,12 +13,27 @@ class VideoIndex extends React.Component {
         console.log(this.props.videos)
     }
 
+    filterVideos(videos, query) {
+        if (!query || !videos) {
+            return videos
+        }
+        return videos.filter((video) => {
+            console.log(video)
+            console.log(query)
+            const videoName = video.title.toLowerCase();
+            return videoName.includes(query);
+        });
+    }
+
     render() {
+        const { search } = window.location;
+        const query = new URLSearchParams(search).get('s');
         this.videos = this.props.videos;
+        const filteredVideos = this.filterVideos(this.videos, query);
         return (
             // <Container>
             <div className="video-index-grid">
-                    {this.videos ? this.videos.map((video, i) => {
+                    {this.videos ? filteredVideos.map((video, i) => {
                         return <VideoItemContainer video={video} key={i}/>
                     }) : 'no videos found'}
             </div>

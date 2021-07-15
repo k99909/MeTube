@@ -6,13 +6,27 @@ import { faSearch, faBars } from '@fortawesome/fontawesome-free-solid';
 
 class Header extends React.Component {
     constructor(props) {
-        super(props)
-        this.sidebarClick = this.sidebarClick.bind(this)
+        super(props);
+        this.state = {
+            search: ""
+        };
+        this.updateSearch = this.updateSearch.bind(this);
+        this.sidebarClick = this.sidebarClick.bind(this);
+        this.search = this.search.bind(this);
     }
 
     sidebarClick = (e) => {
         e.preventDefault();
         document.getElementById("sidebar-menu").classList.toggle("show");
+    }
+
+    search(e) {
+        e.preventDefault;
+        <Link to={`/?s=${this.state.search}/`}/>
+    }
+
+    updateSearch(e) {
+        this.setState({ search: e.target.value })
     }
 
     render() {
@@ -25,8 +39,8 @@ class Header extends React.Component {
                 </Link>
 
                 <form className="search-bar">
-                    <input type="text" placeholder="Search" name="s"/>
-                    <button className="search-button" type='submit'>
+                    <input type="text" placeholder="Search" name="s" onChange={this.updateSearch}/>
+                    <button className="search-button" type='submit' onSubmit={this}>
                         <FontAwesomeIcon icon={faSearch}/>
                         <div className="search-dropdown-content">
                             <span>Search</span>
