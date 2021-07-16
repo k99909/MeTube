@@ -1,13 +1,13 @@
 .video-show-page-whole {
-    height: 100vh;
+    height: 80vh;
     // padding-left: 1rem;
     .video-show-page {
         padding-top: 4rem;
         // height: 40vh;
         display: flex;
         .video-show-container {
-            padding: 2rem;
-            width: 75vw;
+            padding: 1rem;
+            width: 80vw;
             // height: auto;
             .not-logged-in-error {
                 display: none;
@@ -50,7 +50,7 @@
                         display: flex;
                     }
                     span {
-                        font-size: 14px;
+                        font-size: 12px;
                         padding-left: 5px;
                         padding-top: 5px;
                         font-weight: 400px;

@@ -1,5 +1,5 @@
 .video-show-page-whole {
-  height: 100vh;
+  height: 80vh;
 }
 
 .video-show-page-whole .video-show-page {
@@ -10,8 +10,8 @@
 }
 
 .video-show-page-whole .video-show-page .video-show-container {
-  padding: 2rem;
-  width: 75vw;
+  padding: 1rem;
+  width: 80vw;
 }
 
 .video-show-page-whole .video-show-page .video-show-container .not-logged-in-error {
@@ -81,7 +81,7 @@
 }
 
 .video-show-page-whole .video-show-page .video-show-container .video-buttons .likes-container span {
-  font-size: 14px;
+  font-size: 12px;
   padding-left: 5px;
   padding-top: 5px;
   font-weight: 400px;

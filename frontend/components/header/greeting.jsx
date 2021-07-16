@@ -25,7 +25,7 @@ const Greeting = ({ currentUser, logout }) => {
         <hgroup className="header-group">
             <div className="create-video">
                 <div className="create-dropdown">
-                    <Link to="/create"><BiVideoPlus size={30} color={'grey'} /></Link>
+                    <Link to="/create"><BiVideoPlus size={23} color={'grey'} /></Link>
                     <div className="create-dropdown-content">
                         <span>Create</span>
                     </div>
