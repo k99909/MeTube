@@ -3,15 +3,17 @@
 }
 
 .video-show-page-whole .video-show-page {
-  padding-top: 4rem;
+  padding-top: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  min-width: 40rem;
 }
 
 .video-show-page-whole .video-show-page .video-show-container {
   padding: 1rem;
   width: 80vw;
+  min-width: 20rem;
 }
 
 .video-show-page-whole .video-show-page .video-show-container .not-logged-in-error {
@@ -111,8 +113,8 @@
 }
 
 .video-show-page-whole .video-show-page .video-show-container .video-info-container {
-  height: 5rem;
-  padding-top: 1rem;
+  height: 4rem;
+  padding-top: 0.5rem;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 50% 50%;
@@ -123,7 +125,7 @@
 }
 
 .video-show-page-whole .video-show-page .video-show-container .video-title {
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 400;
   font-stretch: extra-expanded;
 }

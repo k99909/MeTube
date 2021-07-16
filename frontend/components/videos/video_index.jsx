@@ -21,7 +21,8 @@ class VideoIndex extends React.Component {
             console.log(video)
             console.log(query)
             const videoName = video.title.toLowerCase();
-            return videoName.includes(query);
+            const videoUploader = video.username.toLowerCase();
+            return videoName.includes(query) || videoUploader.includes(query);
         });
     }
 

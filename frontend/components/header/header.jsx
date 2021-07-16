@@ -39,7 +39,7 @@ class Header extends React.Component {
                 </a>
 
                 <form className="search-bar" onSubmit={this.search}>
-                    <input type="text" placeholder="Search" name="s" onChange={this.updateSearch}/>
+                    <input type="text" className="search-bar-input" placeholder="Search" name="s" onChange={this.updateSearch}/>
                     <button className="search-button" type="submit">
                         <FontAwesomeIcon icon={faSearch}/>
                         <div className="search-dropdown-content">

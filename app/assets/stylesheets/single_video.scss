@@ -2,12 +2,14 @@
     height: 80vh;
     // padding-left: 1rem;
     .video-show-page {
-        padding-top: 4rem;
+        padding-top: 3rem;
         // height: 40vh;
         display: flex;
+        min-width: 40rem;
         .video-show-container {
             padding: 1rem;
             width: 80vw;
+            min-width: 20rem;
             // height: auto;
             .not-logged-in-error {
                 display: none;
@@ -78,15 +80,15 @@
                 // height: 
             }
             .video-info-container {
-                height: 5rem;
-                padding-top: 1rem;
+                height: 4rem;
+                padding-top: 0.5rem;
                 display: grid;
                 grid-template-columns: 50% 50%;
                 grid-template-rows: 50% 50%;
                 border-bottom: 0.1px solid rgba(211, 211, 211, 0.859);
             }
             .video-title {
-                font-size: 1.25rem;
+                font-size: 1rem;
                 font-weight: 400;
                 font-stretch: extra-expanded;
             }

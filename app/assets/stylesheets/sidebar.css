@@ -2,7 +2,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-top: 4rem;
+  padding-top: 2rem;
 }
 
 .sidebar.show {

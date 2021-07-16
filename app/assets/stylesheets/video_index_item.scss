@@ -28,11 +28,12 @@
     }
     .vid-index-text {
         height: 100%;
-        padding-left: 1rem;
+        width: 80%;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         cursor: pointer;
+        margin-left: 0.75rem;
     }
 }
 .vid-index-prof {
