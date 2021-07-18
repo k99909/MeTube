@@ -51,36 +51,18 @@ class SingleVideo extends React.Component {
         e.preventDefault();
         if (!this.props.currentUser) return <p>You must be logged in to like a video</p>
         let currentUserVidLike = this.props.likes.filter(like => like.liker_id === this.props.currentUser)
-        if (currentUserVidLike.length > 0) {
-            if (currentUserVidLike[0].like_type) {
-                this.setState({ likes: this.state.likes - 1 });
-            } else { this.setState({ dislikes: this.state.dislikes - 1 }) }
-            this.props.deleteLike(currentUserVidLike[0].id);
-        };
-        this.props.postLike({ liker_id: this.props.currentUser, video_id: this.props.match.params.videoId, like_type: true });
-        this.setState({ likes: this.state.likes + 1 });
-        // this.props.fetchVideo(this.props.match.params.videoId)
+        currentUserVidLike.length > 0 ? this.props.deleteLike(currentUserVidLike[0].id) : null;
+        this.props.postLike({liker_id: this.props.currentUser, video_id: this.props.match.params.videoId, like_type: true})
+        this.props.fetchVideo(this.props.match.params.videoId);
     }
 
     handleDislike(e) {
         e.preventDefault();
         if (!this.props.currentUser) return <p>You must be logged in to dislike a video</p>
         let currentUserVidLike = this.props.likes.filter(like => like.liker_id === this.props.currentUser)
-        if (currentUserVidLike.length > 0) {
-            if (currentUserVidLike[0].like_type) {
-                this.props.deleteLike(currentUserVidLike[0].id);
-                this.setState({ likes: this.state.likes - 1 });
-                this.props.postLike({ liker_id: this.props.currentUser, video_id: this.props.match.params.videoId, like_type: false })     
-                this.setState({ dislikes: this.state.dislikes + 1 });
-            } else { 
-                this.props.deleteLike(currentUserVidLike[0].id);
-                this.setState({ dislikes: this.state.dislikes - 1 }) 
-            }
-        } else {
-            this.props.postLike({ liker_id: this.props.currentUser, video_id: this.props.match.params.videoId, like_type: false })     
-            this.setState({ dislikes: this.state.dislikes + 1 });
-        };
-        // this.props.fetchVideo(this.props.match.params.videoId);
+        currentUserVidLike.length > 0 ? this.props.deleteLike(currentUserVidLike[0].id) : null;
+        this.props.postLike({ liker_id: this.props.currentUser, video_id: this.props.match.params.videoId, like_type: false })     
+        this.props.fetchVideo(this.props.match.params.videoId);
     }
 
     userLikesVideo() {
@@ -129,11 +111,11 @@ class SingleVideo extends React.Component {
                         <div className={this.userLikesVideo() || this.userDislikesVideo() ? "likes-container liked" : "likes-container"}>
                             <div className={this.userLikesVideo() ? "positive-likes liked" : "positive-likes"} onClick={this.props.currentUser ? this.handleLike : this.notLoggedIn}>
                                 <FiThumbsUp size={30} />
-                                <span>{this.state.likes}</span>
+                                <span>{this.props.likes.filter(like => like.like_type).length}</span>
                             </div>
                             <div className={this.userDislikesVideo() ? "negative-likes liked" : "negative-likes"} onClick={this.props.currentUser ? this.handleDislike : this.notLoggedIn}>
                                 <FiThumbsDown size={30} />    
-                                <span>{this.state.dislikes}</span>
+                                <span>{this.props.likes.filter(like => !like.like_type).length}</span>
                             </div>
                         </div>         
                     </div>
