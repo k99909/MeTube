@@ -88,7 +88,9 @@ thumbnails = [
     "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/scenery_thumbnail.jpg",
     "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/doggie_thumbnail.png",
     "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/mac_miller_good_news_thumbnail.png",
-    "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/lebron_block_thumbnail.png"
+    "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/lebron_block_thumbnail.png",
+    "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/1_minute_meditation_thumbnail.jpg",
+    "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/kobe_ball_fake_thumbnail.jpg"
 ]
 
 Video.all.each_with_index do |video, i| 
