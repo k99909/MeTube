@@ -17,9 +17,11 @@ User.destroy_all
 users = User.create([    
     {username: 'demo_user', password: 'demo123'},
     {username: 'kaz', password: 'kazkaz'},
-    {username: 'Lebron James', password: 'lebronlebron'},
+    {username: 'NBA', password: 'nbanba'},
     {username: 'Mac Miller', password: 'macmac'},
-    {username: 'World Of Dance', password: 'worldofdance'}
+    {username: 'World Of Dance', password: 'worldofdance'},
+    {username: 'doggie', password: 'dogdog'},
+
 ])
 
 videos = Video.create([
@@ -31,7 +33,7 @@ videos = Video.create([
     {
         view_count: 25345, 
         title: 'LeBron James BEST Career Dunks!', 
-        uploader_id: User.find_by_credentials('Lebron James', 'lebronlebron').id    
+        uploader_id: User.find_by_credentials('NBA', 'nbanba').id    
     },
     {
         view_count: 65463, 
@@ -42,6 +44,11 @@ videos = Video.create([
         view_count: 76456, 
         title: '1 minute of beautiful scenery', 
         uploader_id: User.find_by_credentials('kaz', 'kazkaz').id    
+    },
+    {
+        view_count: 80604,
+        title: 'Cute doggie',
+        uploader_id: User.find_by_credentials('doggie', 'dogdog')
     }
 ])
 
@@ -52,14 +59,16 @@ videoUrls = [
     "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/bluprint.mp4",
     "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/lebron.mp4",
     "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/mac_miller_woods.mp4",
-    "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/scenery.mp4"
+    "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/scenery.mp4",
+    "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/doggie.mp4"
 ]
 
 thumbnails = [
     "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/bluprint_thumbnail.jpg",
     "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/lebron_thumbnail.jpg",
     "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/mac_thumbnail.jpg",
-    "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/scenery_thumbnail.jpg"
+    "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/scenery_thumbnail.jpg",
+    "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/doggie_thumbnail.png"
 ]
 
 Video.all.each_with_index do |video, i| 
