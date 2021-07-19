@@ -72,7 +72,8 @@ videoUrls = [
     "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/scenery.mp4",
     "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/doggie.mp4",
     "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/mac_miller_good_news.mp4",
-    "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/lebron_block.mp4"
+    "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/lebron_block.mp4",
+    "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/1_minute_meditation.mp4"
 ]
 
 thumbnails = [
