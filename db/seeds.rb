@@ -64,6 +64,11 @@ videos = Video.create([
         view_count: 84321,
         title: '1 Minute Meditation',
         uploader_id: User.find_by_credentials('Calm', 'calmcalm').id
+    },
+    {
+        view_count: 76532,
+        title: 'Kobe Bryant DOES NOT FLINCH!',
+        uploader_id: User.find_by_credentials('NBA', 'nbanba').id
     }
 ])
 
