@@ -49,7 +49,17 @@ videos = Video.create([
         view_count: 80604,
         title: 'Cute doggie',
         uploader_id: User.find_by_credentials('doggie', 'dogdog')
-    }
+    },
+    {
+        view_count: 105632, 
+        title: 'LeBron James GREATEST BLOCK in NBA History!!!', 
+        uploader_id: User.find_by_credentials('NBA', 'nbanba').id    
+    },
+    {
+        view_count: 101532, 
+        title: 'Good News | Mac Miller', 
+        uploader_id: User.find_by_credentials('Mac Miller', 'macmac').id    
+    },
 ])
 
 thumbnail = 'https://active-storage-metube-dev.s3-us-west-1.amazonaws.com/thumbnail.png'
@@ -60,7 +70,9 @@ videoUrls = [
     "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/lebron.mp4",
     "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/mac_miller_woods.mp4",
     "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/scenery.mp4",
-    "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/doggie.mp4"
+    "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/doggie.mp4",
+    "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/mac_miller_good_news.mp4",
+    "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/lebron_block.mp4"
 ]
 
 thumbnails = [
@@ -68,7 +80,9 @@ thumbnails = [
     "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/lebron_thumbnail.jpg",
     "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/mac_thumbnail.jpg",
     "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/scenery_thumbnail.jpg",
-    "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/doggie_thumbnail.png"
+    "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/doggie_thumbnail.png",
+    "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/mac_miller_good_news_thumbnail.png",
+    "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/lebron_block_thumbnail.png"
 ]
 
 Video.all.each_with_index do |video, i| 
