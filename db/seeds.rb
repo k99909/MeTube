@@ -21,7 +21,7 @@ users = User.create([
     {username: 'Mac Miller', password: 'macmac'},
     {username: 'World Of Dance', password: 'worldofdance'},
     {username: 'doggie', password: 'dogdog'},
-
+    {username: 'Calm', password: 'calmcalm'}
 ])
 
 videos = Video.create([
@@ -60,6 +60,11 @@ videos = Video.create([
         title: 'Good News | Mac Miller', 
         uploader_id: User.find_by_credentials('Mac Miller', 'macmac').id    
     },
+    {
+        view_count: 84321,
+        title: '1 Minute Meditation',
+        uploader_id: User.find_by_credentials('Calm', 'calmcalm').id
+    }
 ])
 
 thumbnail = 'https://active-storage-metube-dev.s3-us-west-1.amazonaws.com/thumbnail.png'
