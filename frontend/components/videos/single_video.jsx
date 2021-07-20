@@ -55,7 +55,7 @@ class SingleVideo extends React.Component {
              if (currentUserVidLike[0].like_type) {
                 this.props.deleteLike(currentUserVidLike[0].id)
              } else {
-                    this.props.updateLike({ liker_id: this.props.currentUser, video_id: this.props.match.params.videoId, like_type: true })
+                    this.props.updateLike({ id: currentUserVidLike[0].id, liker_id: this.props.currentUser, video_id: this.props.match.params.videoId, like_type: true })
                 }
         } else {this.props.postLike({liker_id: this.props.currentUser, video_id: this.props.match.params.videoId, like_type: true})}
         this.props.fetchVideo(this.props.match.params.videoId);
@@ -69,7 +69,7 @@ class SingleVideo extends React.Component {
              if (currentUserVidLike[0].like_type) {
                 this.props.deleteLike(currentUserVidLike[0].id)
              } else {
-                    this.props.updateLike({ liker_id: this.props.currentUser, video_id: this.props.match.params.videoId, like_type: false })
+                    this.props.updateLike({ id: currentUserVidLike[0].id, liker_id: this.props.currentUser, video_id: this.props.match.params.videoId, like_type: false })
                 }
         } else {this.props.postLike({liker_id: this.props.currentUser, video_id: this.props.match.params.videoId, like_type: false})}
         this.props.fetchVideo(this.props.match.params.videoId);
