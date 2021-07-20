@@ -66,7 +66,7 @@ videos = Video.create([
         uploader_id: User.find_by_credentials('Calm', 'calmcalm').id
     },
     {
-        view_count: 76532,
+        view_count: 48532,
         title: 'Kobe Bryant DOES NOT FLINCH!',
         uploader_id: User.find_by_credentials('NBA', 'nbanba').id
     }
@@ -102,4 +102,63 @@ thumbnails = [
 Video.all.each_with_index do |video, i| 
     video.thumbnail.attach(io: open(thumbnails[i]), filename: "#{thumbnails[i].split('/').last}")
     video.upload.attach(io: open(videoUrls[i]), filename: "#{videoUrls[i].split('/').last}")
+end
+
+
+RandomComments = [
+    "Don't steal, don't lie, don't cheat, don't sell drugs. The government hates competition!".
+    "Microsoft bought Skype for 8,5 billion!.. what a bunch of idiots! I downloaded it for free!",
+    "In my life there's been heartache and pain I don't know if I can face it again Can't stop now, I've traveled so far To change this lonely life.",
+    "Yo wa gwan blud you rudeboy bludclart.",
+    "Oh, a storm is threat'ning My very life today If I don't get some shelter Oh yeah, I'm gonna fade away.",
+    "Now this is the story all about how My life got flipped, turned upside down And I'd like to take a minute just sit right there I'll tell you how I became the prince of a town called Bel-air.",
+    "A good lawyer knows the law; a clever one takes the judge to lunch.",
+    "Sorry, I can't hangout. My uncle's cousin's sister in law's best friend's insurance agent's roommate's pet goldfish died. Maybe next time.",
+    "Loving you Isn't the right thing to do How can I Ever change things that I feel? If I could Maybe I'd give you my world How can I When you won't take it from me?",
+    "I see trees of green........ red roses too I see em bloom..... for me and for you And I think to myself.... what a wonderful world.",
+    "Don't want to close my eyes I don't want to fall asleep Cause I'd miss you babe And I don't want to miss a thing Cause even when I dream of you The sweetest dream will never do I'd still miss you babe And I don't want to miss a thing.",
+    "I like to wax my legs and stick the hair on my back. Why? Because it keeps my back warm. There's method in my madness.",
+    "Sometimes I wonder if I really can. But then I think to myself, maybe I can't. But if I could, that would be good. Maybe it's all a lie?",
+    "If I could I would. Wether or not I should, I still would.",
+    "I see you have something to talk about. Well, I have something to shout about. Infact something to sing about. But I'll just keep quiet and let you carry on.",
+    "Some people come into our lives and leave footprints on our hearts, while others come into our lives and make us wanna leave footprints on their face.",
+    "Look! In the sky. It's a bird, it's a plane. Or is it a hellicopter? No actually I think it is a bird. Or maybe I'm just seeing things. Who knows... After 10 shots of Whiskey things start to get a bit strange.",
+    "If you really wanted to do that, then why wouldn't you do that? Instead you do this. It makes no sense.",
+    "Waffles are always better without fire ants and fleas.",
+    "The irony of the situation wasn't lost on anyone in the room.",
+    "The hand sanitizer was actually clear glue.",
+    "The drainage pipe allowed the wildlife to cross the highway without worrying about cars.",
+    "Erin accidentally created a new universe.",
+    "The river stole the gods.",
+    "A song can make or ruin a person’s day if they let it get to them.",
+    "Carol drank the blood as if she were a vampire.",
+    "He drank life before spitting it out.",
+    "The sight of his goatee made me want to run and hide under my sister-in-law's bed.",
+    "You have every right to be angry, but that doesn't give you the right to be mean.",
+    "We debated the greater need for an umbrella, in sunshine for shade or in rain for dryness.",
+    "Pink horses galloped across the sea.",
+    "Trash covered the landscape like sprinkles do a birthday cake.",
+    "It was a slippery slope and he was willing to slide all the way to the deepest depths.",
+    "They did nothing as the raccoon attacked the lady’s bag of food.",
+    "The overpass went under the highway.",
+    "He had unknowingly taken up sleepwalking as a nighttime hobby.",
+    "He decided water-skiing on a frozen lake wasn’t a good idea.",
+    "He felt that dining on the bridge brought romance to his relationship with his cat.",
+    "I only enjoy window shopping when the windows are transparent.",
+    "Please tell me you don't work in a morgue.",
+    "Homesickness became contagious in the younger campers cabin.",
+    "Sometimes it is better to just walk away from things and go back to them later when you’re in a better frame of mind.",
+    "Peter found road kill an excellent way to save money on dinner.",
+    "The paintbrush was angry at the color the artist chose to use."
+]
+
+
+Video.all.each_with_index do |video, i|
+    5.times do Comment.create([
+        {
+            body: RandomComments.sample,
+            video_id: video.id,
+            author_id: User.all.sample.id
+        }
+    ])
 end
