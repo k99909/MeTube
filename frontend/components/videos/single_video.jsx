@@ -66,7 +66,7 @@ class SingleVideo extends React.Component {
         if (!this.props.currentUser) return <p>You must be logged in to dislike a video</p>
         let currentUserVidLike = this.props.likes.filter(like => like.liker_id === this.props.currentUser)
         if (currentUserVidLike.length > 0) {
-             if (currentUserVidLike[0].like_type) {
+             if (!currentUserVidLike[0].like_type) {
                 this.props.deleteLike(currentUserVidLike[0].id)
              } else {
                     this.props.updateLike({ id: currentUserVidLike[0].id, liker_id: this.props.currentUser, video_id: this.props.match.params.videoId, like_type: false })
