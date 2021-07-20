@@ -51,8 +51,13 @@ class SingleVideo extends React.Component {
         e.preventDefault();
         if (!this.props.currentUser) return <p>You must be logged in to like a video</p>
         let currentUserVidLike = this.props.likes.filter(like => like.liker_id === this.props.currentUser)
-        currentUserVidLike.length > 0 ? this.props.deleteLike(currentUserVidLike[0].id) : null;
-        this.props.postLike({liker_id: this.props.currentUser, video_id: this.props.match.params.videoId, like_type: true})
+        if (currentUserVidLike.length > 0) {
+             if (currentUserVidLike[0].like_type) {
+                this.props.deleteLike(currentUserVidLike[0].id)
+             } else {
+                    this.props.updateLike({ liker_id: this.props.currentUser, video_id: this.props.match.params.videoId, like_type: true })
+                }
+        } else {this.props.postLike({liker_id: this.props.currentUser, video_id: this.props.match.params.videoId, like_type: true})}
         this.props.fetchVideo(this.props.match.params.videoId);
     }
 
