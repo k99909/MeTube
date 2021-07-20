@@ -23,7 +23,7 @@ export const postLike = like => {
 export const updateLike = like => {
     return $.ajax({
         method: 'PATCH',
-        url: `/api/likes`,
+        url: `/api/likes/${like.id}`,
         data: { like }
     })
 }
