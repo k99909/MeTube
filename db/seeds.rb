@@ -90,7 +90,8 @@ videoUrls = [
     "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/mac_miller_good_news.mp4",
     "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/lebron_block.mp4",
     "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/1_minute_meditation.mp4",
-    "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/kobe_ball_fake.mp4"
+    "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/kobe_ball_fake.mp4",
+    "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/chance_the_rapper_heart_and_tongue.mp4"
 ]
 
 thumbnails = [
