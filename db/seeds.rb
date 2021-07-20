@@ -21,7 +21,8 @@ users = User.create([
     {username: 'Mac Miller', password: 'macmac'},
     {username: 'World Of Dance', password: 'worldofdance'},
     {username: 'doggie', password: 'dogdog'},
-    {username: 'Calm', password: 'calmcalm'}
+    {username: 'Calm', password: 'calmcalm'},
+    {username: 'Chance The Rapper', password: 'chancechance'}
 ])
 
 videos = Video.create([
@@ -69,6 +70,11 @@ videos = Video.create([
         view_count: 48532,
         title: 'Kobe Bryant DOES NOT FLINCH!',
         uploader_id: User.find_by_credentials('NBA', 'nbanba').id
+    },
+    {
+        view_count: 22315,
+        title: 'Chance The Rapper - The Heart & The Tongue (2021) | [Official Music Video]',
+        uploader_id: User.find_by_credentials('Chance The Rapper', 'chancechance').id
     }
 ])
 
