@@ -80,7 +80,7 @@ videos = Video.create([
     {
         view_count: 45642,
         title: "What Happens In One Minute?",
-        uploader_id: User.find_by_credentials('AsapSCIENCE', 'chancechance').id
+        uploader_id: User.find_by_credentials('AsapSCIENCE', 'asapasap').id
     }
 ])
 
