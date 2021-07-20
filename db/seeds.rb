@@ -22,7 +22,8 @@ users = User.create([
     {username: 'World Of Dance', password: 'worldofdance'},
     {username: 'doggie', password: 'dogdog'},
     {username: 'Calm', password: 'calmcalm'},
-    {username: 'Chance The Rapper', password: 'chancechance'}
+    {username: 'Chance The Rapper', password: 'chancechance'},
+    {username: 'AsapSCIENCE', password: 'asapasap'}
 ])
 
 videos = Video.create([
@@ -75,6 +76,11 @@ videos = Video.create([
         view_count: 22315,
         title: 'Chance The Rapper - The Heart & The Tongue (2021) | [Official Music Video]',
         uploader_id: User.find_by_credentials('Chance The Rapper', 'chancechance').id
+    },
+    {
+        view_count: 45642,
+        title: "What Happens In One Minute?",
+        uploader_id: User.find_by_credentials('AsapSCIENCE', 'chancechance').id
     }
 ])
 
