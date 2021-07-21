@@ -88,15 +88,17 @@
                 border-bottom: 0.1px solid rgba(211, 211, 211, 0.859);
             }
             .video-title {
+                padding-top: 0.5rem;
                 font-size: 1rem;
                 font-weight: 400;
                 font-stretch: extra-expanded;
             }
             .video-stats {
-                padding-top: 1rem;
+                padding-top: 0.5rem;
                 grid-row: 2;
                 grid-column: 1;
                 font-size: 0.8rem;
+                padding-bottom: 0.5rem;
             }
         }
 
@@ -105,7 +107,7 @@
 .video-description-container {
     padding-top: 1rem;
     display: flex;
-    height: 8rem;
+    height: 6rem;
     border-bottom: 0.1px solid rgba(211, 211, 211, 0.859);
 }
 
