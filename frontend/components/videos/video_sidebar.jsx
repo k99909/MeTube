@@ -23,7 +23,7 @@ class VideoSidebar extends React.Component {
         return (
         <div className="video-sidebar">
             <h1>More Videos</h1>
-            {this.props.videos ? this.randomVideoSelection(this.props.videos, 5).map((video, i) => {
+            {this.props.videos ? this.randomVideoSelection(this.props.videos, 8).map((video, i) => {
                 return( 
                     <div className="sidebar-video-item">
                         <SidebarVideoItemContainer video={video} key={10*i}/>
