@@ -87,7 +87,7 @@ videos = Video.create([
     {
         view_count: 865231,
         title: "Our Story in 1 Minute",
-        uploader_id: User.find_by_credentials()
+        uploader_id: User.find_by_credentials('melodysheep', 'sheepsheep').id
     }
 ])
 
