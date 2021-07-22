@@ -24,7 +24,8 @@ users = User.create([
     {username: 'doggie', password: 'dogdog'},
     {username: 'Calm', password: 'calmcalm'},
     {username: 'Chance The Rapper', password: 'chancechance'},
-    {username: 'AsapSCIENCE', password: 'asapasap'}
+    {username: 'AsapSCIENCE', password: 'asapasap'},
+    {username: 'melodysheep', password: 'sheepsheep'}
 ])
 
 videos = Video.create([
@@ -82,6 +83,11 @@ videos = Video.create([
         view_count: 45642,
         title: "What Happens In One Minute?",
         uploader_id: User.find_by_credentials('AsapSCIENCE', 'asapasap').id
+    },
+    {
+        view_count: 865231,
+        title: "Our Story in 1 Minute",
+        uploader_id: User.find_by_credentials()
     }
 ])
 
@@ -99,7 +105,8 @@ videoUrls = [
     "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/1_minute_meditation.mp4",
     "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/kobe_ball_fake.mp4",
     "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/chance_the_rapper_heart_and_tongue.mp4",
-    "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/what_happens_in_one_minute.mp4"
+    "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/what_happens_in_one_minute.mp4",
+    "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/our_story_in_1_minute.mp4"
 ]
 
 thumbnails = [
@@ -113,7 +120,8 @@ thumbnails = [
     "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/1_minute_meditation_thumbnail.jpg",
     "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/kobe_ball_fake_thumbnail.jpg",
     "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/chance_the_rapper_heart_and_tongue_thumbnail.jpg",
-    "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/what_happens_in_one_minute_thumbnail.jpg"
+    "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/what_happens_in_one_minute_thumbnail.jpg",
+    "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/our_story_in_1_minute.jpg"
 ]
 
 Video.all.each_with_index do |video, i| 
