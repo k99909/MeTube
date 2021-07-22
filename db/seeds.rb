@@ -25,7 +25,8 @@ users = User.create([
     {username: 'Calm', password: 'calmcalm'},
     {username: 'Chance The Rapper', password: 'chancechance'},
     {username: 'AsapSCIENCE', password: 'asapasap'},
-    {username: 'melodysheep', password: 'sheepsheep'}
+    {username: 'melodysheep', password: 'sheepsheep'},
+    {username: 'Go code', password: 'codecode'}
 ])
 
 videos = Video.create([
@@ -88,6 +89,11 @@ videos = Video.create([
         view_count: 865231,
         title: "Our Story in 1 Minute",
         uploader_id: User.find_by_credentials('melodysheep', 'sheepsheep').id
+    },
+    {
+        view_count: 25310,
+        title: "Sleep Sort (Craziest Sorting Algorithm) in 1 Minute with Visualisation & Code",
+        uploader_id: User.find_by_credentials('Go Code', 'codecode')
     }
 ])
 
