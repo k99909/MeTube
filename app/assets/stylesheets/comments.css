@@ -113,7 +113,7 @@
   height: 2rem;
   font-size: 10px;
   border: none;
-  border-radius: 2px;
+  border-radius: 10px;
   background-color: #cdcdcd;
 }
 
@@ -154,13 +154,13 @@
 }
 
 .comments-display-box .single-comment-display .single-comment-main span {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 400;
 }
 
 .comments-display-box .single-comment-display .single-comment-main p {
   padding-top: 0.5rem;
-  font-size: 0.75rem;
+  font-size: 0.6rem;
   font-weight: 300;
 }
 /*# sourceMappingURL=comments.css.map */
