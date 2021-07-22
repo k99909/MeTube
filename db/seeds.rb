@@ -170,16 +170,20 @@ RandomComments = [
 
 
 Video.all.each_with_index do |video, i|
-    5.times do Comment.create([
+    5.times do Comment.create(
         {
             body: RandomComments.sample,
             video_id: video.id,
             author_id: User.all.sample.id
         }
-    ])
+    )
 end
 
 
 Video.all.each_with_index do |video, i|
-    4.times do Like.create({})
+    4.times do Like.create(
+        {
+            liker_id: 
+        }
+    )
 end
