@@ -185,7 +185,7 @@ Video.all.each_with_index do |video, i|
         {
             liker_id: 5,
             video_id: video.id,
-            
+            like_type: true
         }
     )
 end
