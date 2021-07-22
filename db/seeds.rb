@@ -182,11 +182,12 @@ end
 
 Video.all.each_with_index do |video, i|
     User.all.each do |user|
-        unless
-        Like.create({
-                liker_id: user.id,
-                video_id: video.id,
-                like_type: true
-        })
+        unless user.username == 'demo_user'
+            Like.create({
+                    liker_id: user.id,
+                    video_id: video.id,
+                    like_type: true
+            })
+        end
     end
 end
