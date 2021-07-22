@@ -12,7 +12,8 @@ require 'open-uri'
 
 Video.destroy_all
 User.destroy_all
-
+Comment.destroy_all
+Like.destroy_all
 
 users = User.create([    
     {username: 'demo_user', password: 'demo123'},
@@ -50,7 +51,7 @@ videos = Video.create([
     {
         view_count: 80604,
         title: 'Cute doggie',
-        uploader_id: User.find_by_credentials('doggie', 'dogdog')
+        uploader_id: User.find_by_credentials('doggie', 'dogdog').id
     },
     {
         view_count: 105632, 
@@ -122,7 +123,7 @@ end
 
 
 RandomComments = [
-    "Don't steal, don't lie, don't cheat, don't sell drugs. The government hates competition!".
+    "Don't steal, don't lie, don't cheat, don't sell drugs. The government hates competition!",
     "Microsoft bought Skype for 8,5 billion!.. what a bunch of idiots! I downloaded it for free!",
     "In my life there's been heartache and pain I don't know if I can face it again Can't stop now, I've traveled so far To change this lonely life.",
     "Yo wa gwan blud you rudeboy bludclart.",
@@ -177,6 +178,7 @@ Video.all.each_with_index do |video, i|
             author_id: User.all.sample.id
         }
     )
+    end
 end
 
 
