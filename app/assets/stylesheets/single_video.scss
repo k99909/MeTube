@@ -88,6 +88,8 @@
                 border-bottom: 0.1px solid rgba(211, 211, 211, 0.859);
             }
             .video-title {
+                grid-column-start: 1;
+                grid-column-end: 3;
                 padding-top: 0.5rem;
                 font-size: 1rem;
                 font-weight: 400;

@@ -125,6 +125,9 @@
 }
 
 .video-show-page-whole .video-show-page .video-show-container .video-title {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 3;
   padding-top: 0.5rem;
   font-size: 1rem;
   font-weight: 400;
