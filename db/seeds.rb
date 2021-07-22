@@ -106,7 +106,8 @@ videoUrls = [
     "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/kobe_ball_fake.mp4",
     "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/chance_the_rapper_heart_and_tongue.mp4",
     "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/what_happens_in_one_minute.mp4",
-    "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/our_story_in_1_minute.mp4"
+    "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/our_story_in_1_minute.mp4",
+    "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/sleep_sort.mp4"
 ]
 
 thumbnails = [
@@ -121,7 +122,8 @@ thumbnails = [
     "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/kobe_ball_fake_thumbnail.jpg",
     "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/chance_the_rapper_heart_and_tongue_thumbnail.jpg",
     "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/what_happens_in_one_minute_thumbnail.jpg",
-    "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/our_story_in_1_minute.jpg"
+    "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/our_story_in_1_minute.jpg",
+    "https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/sleep_sort.jpg"
 ]
 
 Video.all.each_with_index do |video, i| 
