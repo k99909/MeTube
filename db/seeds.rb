@@ -181,11 +181,7 @@ end
 
 
 Video.all.each_with_index do |video, i|
-    4.times do Like.create(
-        {
-            liker_id: 5,
-            video_id: video.id,
-            like_type: true
-        }
-    )
+    User.all.each do |user|
+        
+    end
 end
