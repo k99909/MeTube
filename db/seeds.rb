@@ -185,7 +185,8 @@ Video.all.each_with_index do |video, i|
         unless
         Like.create({
                 liker_id: user.id,
-                
+                video_id: video.id,
+                like_type: true
         })
     end
 end
