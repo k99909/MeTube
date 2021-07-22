@@ -181,5 +181,5 @@ end
 
 
 Video.all.each_with_index do |video, i|
-    4.times do Like.create([])
+    4.times do Like.create({})
 end
