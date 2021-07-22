@@ -32,7 +32,7 @@
   width: 95%;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
+  padding-top: 0.2rem;
 }
 
 .video-index-item .vid-index-text {
