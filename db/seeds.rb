@@ -180,4 +180,6 @@ Video.all.each_with_index do |video, i|
 end
 
 
-video.
+Video.all.each_with_index do |video, i|
+    
+end
