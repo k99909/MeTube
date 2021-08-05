@@ -32,7 +32,7 @@ export const fetchLike = likeId => dispatch => (
 export const deleteLike = likeId => dispatch => {
     UtilLikeAPI.deleteLike(likeId);
     return dispatch(removeLike(likeId));
-}
+};
 
 export const postLike = like => dispatch => (
     UtilLikeAPI.postLike(like)
