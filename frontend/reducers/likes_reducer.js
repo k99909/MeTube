@@ -14,11 +14,11 @@ const likesReducer = (state = {}, action) => {
         case RECEIVE_LIKE:
             return Object.assign(newState, action.like);
         case REMOVE_LIKE:
-            delete newState[action.likeId]
+            delete newState[action.likeId];
             return newState
         default:
             return state;
     }
 }
 
-export default likesReducer;''
+export default likesReducer;
