@@ -50,7 +50,7 @@ export const postComment = comment => dispatch => (
         .then(comment => dispatch(receiveComment(comment)),
         err => (dispatch(receiveCommentErrors(err.responseJSON)))
         )
-)
+);
 
 export const updateComment = comment => dispatch => (
     UtilCommentAPI.updateComment(comment)
