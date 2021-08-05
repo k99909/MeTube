@@ -9,31 +9,31 @@ export const CLEAR_VIDEO_ERRORS = "CLEAR_VIDEO_ERRORS";
 const receiveVideos = videos => ({
     type: RECEIVE_VIDEOS,
     videos
-})
+});
 
 const receiveVideo = video => ({
     type: RECEIVE_VIDEO,
     video
-})
+});
 
 const removeVideo = videoId => ({
     type: REMOVE_VIDEO,
     videoId
-})
+});
 
 export const receiveVideoErrors = errors => ({
     type: RECEIVE_VIDEO_ERRORS,
     errors
-})
+});
 
 export const clearVideoErrors = () => ({
     type: CLEAR_VIDEO_ERRORS
-})
+});
 
 export const fetchVideos = () => dispatch => (
     UtilVideoAPI.fetchVideos()
         .then(videos => dispatch(receiveVideos(videos)))
-)
+);
 
 export const fetchVideo = videoId => dispatch => {
     UtilVideoAPI.fetchVideo(videoId)
