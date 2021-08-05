@@ -39,21 +39,21 @@ export const fetchVideo = videoId => dispatch => {
     UtilVideoAPI.fetchVideo(videoId)
         .then(video => dispatch(receiveVideo(video)),
         err => (dispatch(receiveVideoErrors(err.responseJSON))))
-}
+};
 
 export const deleteVideo = videoId => dispatch => (
     UtilVideoAPI.deleteVideo(videoId)
         .then(() => dispatch(removeVideo(videoId)))
-)
+);
 
 export const postVideo = video => dispatch => (
     UtilVideoAPI.postVideo(video)
         .then(video => dispatch(receiveVideo(video)),
         err => (dispatch(receiveVideoErrors(err.responseJSON))))
-)
+);
 
 export const updateVideo = video => dispatch => (
     UtilVideoAPI.updateVideo(video)
         .then(video => dispatch(receiveVideo(video)),
         err => dispatch(receiveVideoErrors(err.responseJSON)))
-)
+);
