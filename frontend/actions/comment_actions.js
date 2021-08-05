@@ -19,7 +19,7 @@ const receiveComment = comment => ({
 const removeComment = commentId => ({
     type: REMOVE_COMMENT,
     commentId
-})
+});
 
 const receiveCommentErrors = errors => ({
     type: RECEIVE_COMMENT_ERRORS,
