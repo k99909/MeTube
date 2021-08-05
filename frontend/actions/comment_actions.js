@@ -43,7 +43,7 @@ export const fetchComment = commentId => dispatch => (
 export const deleteComment = commentId => dispatch => {
     UtilCommentAPI.deleteComment(commentId);
     return dispatch(removeComment(commentId));
-}
+};
 
 export const postComment = comment => dispatch => (
     UtilCommentAPI.postComment(comment)
