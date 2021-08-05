@@ -27,7 +27,7 @@ export const fetchLikes = videoId => dispatch => (
 export const fetchLike = likeId => dispatch => (
     UtilLikeAPI.fetchLike(likeId)
         .then(like => dispatch(receiveLike(like)))
-)
+);
 
 export const deleteLike = likeId => dispatch => {
     UtilLikeAPI.deleteLike(likeId);
