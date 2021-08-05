@@ -33,7 +33,7 @@ export const clearCommentErrors = () => ({
 export const fetchComments = videoId => dispatch => (
     UtilCommentAPI.fetchComments(videoId)
         .then(comments => dispatch(receiveComments(comments)))
-)
+);
 
 export const fetchComment = commentId => dispatch => (
     UtilCommentAPI.fetchComment(commentId)
