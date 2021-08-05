@@ -37,7 +37,7 @@ export const deleteLike = likeId => dispatch => {
 export const postLike = like => dispatch => (
     UtilLikeAPI.postLike(like)
         .then(like => dispatch(receiveLike(like)))
-)
+);
 
 export const updateLike = like => dispatch => (
     UtilLikeAPI.updateLike(like)
