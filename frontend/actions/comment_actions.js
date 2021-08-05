@@ -28,7 +28,7 @@ const receiveCommentErrors = errors => ({
 
 export const clearCommentErrors = () => ({
     type: CLEAR_COMMENT_ERRORS
-})
+});
 
 export const fetchComments = videoId => dispatch => (
     UtilCommentAPI.fetchComments(videoId)
