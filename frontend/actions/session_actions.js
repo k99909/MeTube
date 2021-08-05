@@ -22,7 +22,7 @@ const receiveErrors = errors => ({
 
 const logoutCurrentUser = () => ({
     type: LOGOUT_CURRENT_USER
-})
+});
 
 export const clearErrors = () => {
     return {
