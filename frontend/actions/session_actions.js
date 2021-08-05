@@ -13,7 +13,7 @@ export const CLEAR_ERRORS = "CLEAR_ERRORS";
 const receiveCurrentUser = user => ({
     type: RECEIVE_CURRENT_USER,
     user
-})
+});
 
 const receiveErrors = errors => ({
     type: RECEIVE_SESSION_ERRORS,
