@@ -38,7 +38,7 @@ export const fetchComments = videoId => dispatch => (
 export const fetchComment = commentId => dispatch => (
     UtilCommentAPI.fetchComment(commentId)
         .then(comment => dispatch(receiveComment(comment)))
-)
+);
 
 export const deleteComment = commentId => dispatch => {
     UtilCommentAPI.deleteComment(commentId);
