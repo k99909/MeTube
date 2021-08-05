@@ -9,7 +9,7 @@ export const CLEAR_COMMENT_ERRORS = "CLEAR_COMMENT_ERRORS";
 const receiveComments = comments => ({
     type: RECEIVE_COMMENTS,
     comments
-})
+});
 
 const receiveComment = comment => ({
     type: RECEIVE_COMMENT,
