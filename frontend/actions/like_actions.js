@@ -42,4 +42,4 @@ export const postLike = like => dispatch => (
 export const updateLike = like => dispatch => (
     UtilLikeAPI.updateLike(like)
         .then(like => dispatch(receiveLike(like)))
-)
+);
