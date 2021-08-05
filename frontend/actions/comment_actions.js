@@ -57,4 +57,4 @@ export const updateComment = comment => dispatch => (
         .then(comment => dispatch(receiveComment(comment)),
             err => (dispatch(receiveCommentErrors(err.responseJSON)))
         )
-)
+);
