@@ -12,7 +12,7 @@ const receiveLikes = likes => ({
 const receiveLike = like => ({
     type: RECEIVE_LIKE,
     like
-})
+});
 
 const removeLike = likeId => ({
     type: REMOVE_LIKE,
