@@ -24,7 +24,7 @@ const removeComment = commentId => ({
 const receiveCommentErrors = errors => ({
     type: RECEIVE_COMMENT_ERRORS,
     errors
-})  
+});  
 
 export const clearCommentErrors = () => ({
     type: CLEAR_COMMENT_ERRORS
