@@ -14,7 +14,7 @@ const receiveComments = comments => ({
 const receiveComment = comment => ({
     type: RECEIVE_COMMENT,
     comment
-})
+});
 
 const removeComment = commentId => ({
     type: REMOVE_COMMENT,
