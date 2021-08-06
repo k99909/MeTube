@@ -20,7 +20,7 @@ const mDTP = (dispatch, ownProps) => ({
     deleteComment: commentId => dispatch(deleteComment(commentId)),
     fetchComments: () => dispatch(fetchComments(ownProps.match.params.videoId)),
     fetchComment: commentId => dispatch(fetchComment(commentId))
-})
+});
 
 
 export default withRouter(connect(mSTP, mDTP)(Comments))
