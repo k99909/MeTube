@@ -13,8 +13,8 @@ const mSTP = (state, ownProps) => {
         currentUser: state.session.id,
         videoId: parseInt(ownProps.match.params.videoId),
         likes: Object.values(state.entities.likes)
-    }
-}
+    };
+};
 
 const mDTP = dispatch => ({
     deleteVideo: videoId => dispatch(deleteVideo(videoId)),
@@ -25,7 +25,7 @@ const mDTP = dispatch => ({
     fetchLike: likeId => dispatch(fetchLike(likeId)),
     fetchLikes: videoId => dispatch(fetchLikes(videoId))
     // updateVideo: video => dispatch(updateVideo(video)),
-})
+});
 
 
 
