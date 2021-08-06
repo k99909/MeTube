@@ -35,7 +35,7 @@ class Comments extends React.Component {
         const comment = Object.assign({
             video_id: this.props.match.params.videoId,
             author_id: this.props.currentUser
-        }, this.state)
+        }, this.state);
         this.props.postComment(comment);
         this.setState({body: ''});
     }
