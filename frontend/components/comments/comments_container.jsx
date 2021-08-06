@@ -12,7 +12,7 @@ import { withRouter } from 'react-router-dom';
 const mSTP = (state, ownProps) => ({
     comments: Object.values(state.entities.comments),
     currentUser: state.session.id
-})
+});
 
 const mDTP = (dispatch, ownProps) => ({
     postComment: comment => dispatch(postComment(comment)),
