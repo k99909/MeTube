@@ -2,13 +2,13 @@ import React from 'react';
 
 class SessionForm extends React.Component {
     constructor(props) {
-        super(props)
+        super(props);
         this.state = {
             username: '',
             password: ''
         };
-        this.handleSubmit = this.handleSubmit.bind(this)
-        this.demoLogin = this.demoLogin.bind(this)
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.demoLogin = this.demoLogin.bind(this);
     }
 
     componentWillUnmount() {
