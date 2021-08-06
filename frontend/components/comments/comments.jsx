@@ -5,7 +5,7 @@ import { withRouter } from 'react-router-dom';
 
 class Comments extends React.Component {
     constructor(props) {
-        super(props)
+        super(props);
         this.state = {
             body: '',
             videoId: this.props.videoId
