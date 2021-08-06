@@ -31,10 +31,10 @@ class SingleVideo extends React.Component {
             this.props.fetchLikes(this.props.match.params.videoId);
         } else {
             if (this.props.likes.length != this.props.video.likes.length) {
-                this.props.fetchLikes(this.props.match.params.videoId)
+                this.props.fetchLikes(this.props.match.params.videoId);
             } else {if (this.props.likes.length > 0) {
                 if (this.props.likes[0].video_id != this.props.match.params.videoId) {
-                    this.props.fetchLikes(this.props.match.params.videoId)
+                    this.props.fetchLikes(this.props.match.params.videoId);
                 }
         }}}
 
