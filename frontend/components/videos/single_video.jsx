@@ -22,7 +22,6 @@ class SingleVideo extends React.Component {
     componentDidMount() {
         this.props.fetchVideo(this.props.match.params.videoId);
         this.props.fetchLikes(this.props.match.params.videoId);
-        console.log('likes: ', this.props.likes)
     }
 
     componentDidUpdate() {
