@@ -14,7 +14,7 @@ class Comments extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchComments()
+        this.props.fetchComments();
     }
 
     componentDidUpdate() {
