@@ -14,6 +14,6 @@ const Main = () => (
         {/* </Container> */}
         </div>
     </div>
-)
+);
 
 export default Main;
