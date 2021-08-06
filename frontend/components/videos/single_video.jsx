@@ -42,7 +42,7 @@ class SingleVideo extends React.Component {
 
     handleDelete(e) {
         e.preventDefault();
-        this.props.deleteVideo(this.props.videoId)
+        this.props.deleteVideo(this.props.videoId);
     }
 
     handleLike(e) {
