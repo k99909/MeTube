@@ -12,7 +12,7 @@ class SingleVideo extends React.Component {
         this.state = {
             likes: this.props.likes.filter(like => like.like_type).length,
             dislikes: this.props.likes.filter(like => !like.like_type).length
-        }
+        };
         this.handleDelete = this.handleDelete.bind(this);
         this.handleLike = this.handleLike.bind(this);
         this.handleDislike = this.handleDislike.bind(this);
