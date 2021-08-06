@@ -26,7 +26,7 @@ class Header extends React.Component {
     }
 
     updateSearch(e) {
-        this.setState({ search: e.target.value })
+        this.setState({ search: e.target.value });
     }
 
     render() {
