@@ -23,4 +23,4 @@ const mDTP = (dispatch, ownProps) => ({
 });
 
 
-export default withRouter(connect(mSTP, mDTP)(Comments))
+export default withRouter(connect(mSTP, mDTP)(Comments));
