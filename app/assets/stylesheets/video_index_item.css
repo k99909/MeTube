@@ -30,9 +30,6 @@
 .video-index-item .vid-index-info {
   height: 6rem;
   width: 95%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  padding-top: 0.2rem;
 }
 
 .video-index-item .vid-index-text {

@@ -4,6 +4,8 @@
   place-items: center;
   width: 100vw;
   background-color: #747474;
+  padding-top: 4vh;
+  height: 100%;
 }
 
 .video-form-box {
