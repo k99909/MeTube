@@ -4,8 +4,8 @@
   place-items: center;
   width: 100vw;
   background-color: #747474;
-  padding-top: 4vh;
-  height: 100%;
+  padding-top: 3rem;
+  height: 100vh;
 }
 
 .video-form-box {
@@ -26,7 +26,6 @@
   background-color: white;
   padding-top: 2rem;
   padding-bottom: 2rem;
-  overflow-y: scroll;
 }
 
 .video-form-box h2 {
