@@ -30,6 +30,9 @@
 .video-index-item .vid-index-info {
   height: 6rem;
   width: 95%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .video-index-item .vid-index-text {
@@ -58,5 +61,9 @@
   cursor: pointer;
   color: white;
   height: 30px;
+}
+
+.title-link {
+  width: 100%;
 }
 /*# sourceMappingURL=video_index_item.css.map */

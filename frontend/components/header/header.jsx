@@ -8,11 +8,17 @@ class Header extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            search: ""
+            search: "",
+            sidebar: true
         };
         this.updateSearch = this.updateSearch.bind(this);
         this.sidebarClick = this.sidebarClick.bind(this);
         this.search = this.search.bind(this);
+    }
+
+    ComponentDidUpdate() {
+        console.log('component mounted')
+        console.log(document.getElementById("sidebar-menu"));
     }
 
     sidebarClick = (e) => {
@@ -32,8 +38,7 @@ class Header extends React.Component {
     render() {
         return (
             <header className="header">
-                <FontAwesomeIcon icon={faBars} className="sidebar-icon" onClick={this.sidebarClick}/>
-
+                { this.state.sidebar ? <FontAwesomeIcon icon={faBars} className="sidebar-icon" onClick={this.sidebarClick}/> : ''}
                 <a href="/#/" className="header-link" replace>
                     <img src='https://active-storage-metube-dev.s3.us-west-1.amazonaws.com/logo.png' alt="logo" className="logo"/>
                 </a>

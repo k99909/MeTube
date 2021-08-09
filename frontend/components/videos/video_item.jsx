@@ -30,7 +30,7 @@ class VideoItem extends React.Component {
                     <div className="vid-index-prof">
                         <FaUserAlt color={'white'} />
                     </div>
-                    <Link to={`/watch/${this.props.video.id}`}>
+                    <Link to={`/watch/${this.props.video.id}`} className="title-link">
                     <div className="vid-index-text">
                         <p>{this.props.video.title}</p>
                         <span className="index-username">
