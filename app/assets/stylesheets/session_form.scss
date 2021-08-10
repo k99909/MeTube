@@ -30,13 +30,12 @@
 
 .login-submit, .demo-login {
     background-color: rgb(26, 115, 232);
-    border-radius: 4px;
     color: white;
     height: 36px;
     width: 80px;
     font-size: 12px;
     font-weight: 300;
-    border-radius: 4px;
+    border-radius: 6px;
     cursor: pointer;
     border-color: white;
     box-shadow: none;
@@ -45,6 +44,10 @@
         font-size: 12px;
         font-weight: 300;
     }
+}
+
+.demo-login {
+    width: 90px;
 }
 
 .signup-buttons {
@@ -56,18 +59,15 @@
         padding-right: 0px;
     }
     .signup-submit{
-        background-color: rgb(26, 115, 232);
-        border-radius: 4px;
+        background-color: rgb(55, 125, 218);
+        border-radius: 6px;
         color: white;
         height: 36px;
-        width: 80px;
+        width: 90px;
         font-size: 12px;
         font-weight: 300;
-        
-            font-size: 12px;
-            font-weight: 300;
-        
-        border-radius: 4px;
+        font-size: 12px;
+        font-weight: 300;
         cursor: pointer;
         border-color: white;
         box-shadow: none;

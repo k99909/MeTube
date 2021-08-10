@@ -39,13 +39,12 @@
 
 .login-submit, .demo-login {
   background-color: #1a73e8;
-  border-radius: 4px;
   color: white;
   height: 36px;
   width: 80px;
   font-size: 12px;
   font-weight: 300;
-  border-radius: 4px;
+  border-radius: 6px;
   cursor: pointer;
   border-color: white;
   -webkit-box-shadow: none;
@@ -57,6 +56,10 @@
 .login-submit button, .login-submit input, .demo-login button, .demo-login input {
   font-size: 12px;
   font-weight: 300;
+}
+
+.demo-login {
+  width: 90px;
 }
 
 .signup-buttons {
@@ -77,16 +80,15 @@
 }
 
 .signup-buttons .signup-submit {
-  background-color: #1a73e8;
-  border-radius: 4px;
+  background-color: #377dda;
+  border-radius: 6px;
   color: white;
   height: 36px;
-  width: 80px;
+  width: 90px;
   font-size: 12px;
   font-weight: 300;
   font-size: 12px;
   font-weight: 300;
-  border-radius: 4px;
   cursor: pointer;
   border-color: white;
   -webkit-box-shadow: none;
