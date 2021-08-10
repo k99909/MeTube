@@ -6,7 +6,7 @@ import { fetchVideos } from '../../actions/video_actions';
 const mSTP = (state, ownProps) => ({
     videos: state.entities.videos,
     video: state.entities.videos[ownProps.match.params.videoId] 
-})
+});
 
 const mDTP = dispatch => ({
     fetchVideos: () => dispatch(fetchVideos())
