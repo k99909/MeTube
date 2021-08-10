@@ -10,7 +10,7 @@ class VideoIndex extends React.Component {
 
     componentDidMount() {
         this.props.fetchVideos();
-        console.log(this.props.videos)
+        console.log(this.props.videos);
     }
 
     filterVideos(videos, query) {
