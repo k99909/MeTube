@@ -10,6 +10,6 @@ const mSTP = (state, ownProps) => ({
 
 const mDTP = dispatch => ({
     fetchVideos: () => dispatch(fetchVideos())
-})
+});
 
 export default withRouter(connect(mSTP, mDTP)(VideoSidebar));
