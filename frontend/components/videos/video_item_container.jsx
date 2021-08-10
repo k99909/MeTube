@@ -6,7 +6,7 @@ const mSTP = (state, ownProps) => {
     return {
         uploader: state.entities.users[ownProps.video.uploader_id]
     };
-}
+};
 
 const mDTP = (dispatch, ownProps) => ({
     fetchVideos: () => dispatch(fetchVideos()),
