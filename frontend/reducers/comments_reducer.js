@@ -5,7 +5,7 @@ import {
 } from '../actions/comment_actions';
 
 const commentsReducer = (state = {}, action) => {
-    Object.freeze(state)
+    Object.freeze(state);
     let newState = Object.assign({}, state)
 
     switch (action.type) {
