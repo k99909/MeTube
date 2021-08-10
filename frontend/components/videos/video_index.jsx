@@ -4,7 +4,7 @@ import VideoItemContainer from './video_item_container';
 
 class VideoIndex extends React.Component {
     constructor(props) {
-        super(props)
+        super(props);
         // this.videos = this.props.videos
     }
 
