@@ -7,7 +7,7 @@ class VideoItem extends React.Component {
         super(props);
         // this.state = {
         //     uploader: ''
-        // }
+        // };
     }
 
     componentDidMount() {
