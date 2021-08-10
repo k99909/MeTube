@@ -15,7 +15,7 @@ class VideoIndex extends React.Component {
 
     filterVideos(videos, query) {
         if (!query || !videos) {
-            return videos
+            return videos;
         };
         return videos.filter((video) => {
             console.log(video)
