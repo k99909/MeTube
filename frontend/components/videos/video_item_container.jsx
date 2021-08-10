@@ -11,6 +11,6 @@ const mSTP = (state, ownProps) => {
 const mDTP = (dispatch, ownProps) => ({
     fetchVideos: () => dispatch(fetchVideos()),
     fetchUser: userId => dispatch(fetchUser(userId))
-})
+});
 
 export default connect(mSTP, mDTP)(VideoItem);
