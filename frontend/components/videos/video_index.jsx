@@ -18,7 +18,7 @@ class VideoIndex extends React.Component {
             return videos;
         };
         return videos.filter((video) => {
-            console.log(video)
+            console.log(video);
             console.log(query)
             const videoName = video.title.toLowerCase();
             const videoUploader = video.username.toLowerCase();
