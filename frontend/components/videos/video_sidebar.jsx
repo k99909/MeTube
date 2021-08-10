@@ -15,7 +15,7 @@ class VideoSidebar extends React.Component {
             let randInt = Math.floor(Math.random() * randomVideos.length);
             sidebarVideos.push(randomVideos[randInt]);
             randomVideos = randomVideos.slice(0, randInt).concat(randomVideos.slice(randInt + 1));
-        }
+        };
         return sidebarVideos;
     }
 
