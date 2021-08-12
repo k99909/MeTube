@@ -6,7 +6,7 @@ import {
 
 
 const videoErrorsReducer = (state = [], action) => {
-    Object.freeze(state)
+    Object.freeze(state);
     console.log(action)
     // debugger
     switch (action.type) {
