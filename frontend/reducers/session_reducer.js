@@ -17,5 +17,5 @@ export default (state = _nullUser, action) => {
             return _nullUser;
         default:
             return state;
-    }
-}
+    };
+};
