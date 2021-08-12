@@ -18,7 +18,7 @@ export const postComment = comment => {
         url: 'api/comments',
         data: { comment }
     });
-}
+};
 
 export const updateComment = comment => {
     $.ajax({
