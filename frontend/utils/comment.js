@@ -2,7 +2,7 @@ export const fetchComments = videoId => {
     return $.ajax({
         method: 'GET',
         url: `api/videos/${videoId}/comments`
-    })
+    });
 };
 
 export const fetchComment = commentId => {
