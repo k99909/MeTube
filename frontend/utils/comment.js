@@ -1,3 +1,5 @@
+// API Utils for ajax
+
 export const fetchComments = videoId => {
     return $.ajax({
         method: 'GET',
