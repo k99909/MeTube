@@ -5,7 +5,7 @@ import {
 } from '../actions/video_actions';
 
 const videosReducer = (state = {}, action) => {
-    Object.freeze(state)
+    Object.freeze(state);
     let newState = Object.assign({}, state)
     switch (action.type) {
         case RECEIVE_VIDEOS:
