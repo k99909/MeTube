@@ -9,4 +9,4 @@ export default combineReducers({
     videos,
     comments,
     likes
-})
+});
