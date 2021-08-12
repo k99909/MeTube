@@ -10,7 +10,7 @@ export const fetchComment = commentId => {
         method: 'GET',
         url: `api/comments/${commentId}`
     })
-}
+};
 
 export const postComment = comment => {
     return $.ajax({
