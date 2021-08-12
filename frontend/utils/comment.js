@@ -17,7 +17,7 @@ export const postComment = comment => {
         method: 'POST',
         url: 'api/comments',
         data: { comment }
-    })
+    });
 }
 
 export const updateComment = comment => {
