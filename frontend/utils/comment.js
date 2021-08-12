@@ -33,4 +33,4 @@ export const deleteComment = commentId => {
         method: 'DELETE',
         url: `api/comments/${commentId}`
     });
-}
+};
