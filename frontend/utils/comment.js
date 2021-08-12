@@ -25,7 +25,7 @@ export const updateComment = comment => {
         method: 'PATCH',
         url: `api/comments/${comment.id}`,
         data: { comment }
-    })
+    });
 }
 
 export const deleteComment = commentId => {
