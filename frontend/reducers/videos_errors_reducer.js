@@ -17,7 +17,7 @@ const videoErrorsReducer = (state = [], action) => {
             return [];
         default:
             return state;
-    }
+    };
 }
 
 
