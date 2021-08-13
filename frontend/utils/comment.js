@@ -19,6 +19,8 @@ export const fetchComment = commentId => {
     });
 };
 
+// API call for posting a comment object
+
 export const postComment = comment => {
     return $.ajax({
         method: 'POST',
