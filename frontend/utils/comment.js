@@ -1,13 +1,16 @@
 // API Utils for ajax
 
 
-// API call for fetching comments 
+// API call for fetching all comments for a video searched by video ID
+
 export const fetchComments = videoId => {
     return $.ajax({
         method: 'GET',
         url: `api/videos/${videoId}/comments`
     });
 };
+
+// API call for 
 
 export const fetchComment = commentId => {
     return $.ajax({
