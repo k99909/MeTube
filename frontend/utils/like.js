@@ -12,7 +12,7 @@ export const fetchLike = likeId => {
         method: 'GET',
         url: `/api/likes/${likeId}`
     });
-}
+};
 
 export const postLike = like => {
     return $.ajax({
