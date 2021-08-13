@@ -27,7 +27,7 @@ export const updateLike = like => {
         method: 'PATCH',
         url: `/api/likes/${like.id}`,
         data: { like }
-    })
+    });
 }
 
 export const deleteLike = likeId => {
