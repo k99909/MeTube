@@ -4,7 +4,7 @@ export const fetchLikes = videoId => {
     return $.ajax({
         method: 'GET',
         url: `/api/videos/${videoId}/likes`
-    })
+    });
 }
 
 export const fetchLike = likeId => {
