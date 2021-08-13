@@ -10,7 +10,7 @@ export const fetchComments = videoId => {
     });
 };
 
-// API call for 
+// API call for fetching a single comment ID
 
 export const fetchComment = commentId => {
     return $.ajax({
