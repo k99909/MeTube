@@ -39,6 +39,8 @@ export const updateComment = comment => {
     });
 };
 
+// Ajax call for deleting comment with ID 
+
 export const deleteComment = commentId => {
     $.ajax({
         method: 'DELETE',
