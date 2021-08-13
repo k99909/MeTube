@@ -1,7 +1,7 @@
 // API Utils for ajax
 
 
-// API call for fetching all comments for a video searched by video ID
+// Ajax call for fetching all comments for a video searched by video ID
 
 export const fetchComments = videoId => {
     return $.ajax({
@@ -10,7 +10,7 @@ export const fetchComments = videoId => {
     });
 };
 
-// API call for fetching a single comment ID
+// Ajax call for fetching a single comment ID
 
 export const fetchComment = commentId => {
     return $.ajax({
@@ -19,7 +19,7 @@ export const fetchComment = commentId => {
     });
 };
 
-// API call for posting a comment object
+// Ajax call for posting a comment object
 
 export const postComment = comment => {
     return $.ajax({
@@ -28,6 +28,8 @@ export const postComment = comment => {
         data: { comment }
     });
 };
+
+// Ajax call for updating a comment object
 
 export const updateComment = comment => {
     $.ajax({
