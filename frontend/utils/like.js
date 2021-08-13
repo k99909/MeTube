@@ -1,3 +1,5 @@
+// API Util for likes
+
 export const fetchLikes = videoId => {
     return $.ajax({
         method: 'GET',
