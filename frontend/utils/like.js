@@ -20,7 +20,7 @@ export const postLike = like => {
         url: '/api/likes',
         data: { like }
     });
-}
+};
 
 export const updateLike = like => {
     return $.ajax({
