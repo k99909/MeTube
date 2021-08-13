@@ -19,7 +19,7 @@ export const postLike = like => {
         method: 'POST',
         url: '/api/likes',
         data: { like }
-    })
+    });
 }
 
 export const updateLike = like => {
