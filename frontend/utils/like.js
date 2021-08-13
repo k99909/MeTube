@@ -11,7 +11,7 @@ export const fetchLike = likeId => {
     return $.ajax({
         method: 'GET',
         url: `/api/likes/${likeId}`
-    })
+    });
 }
 
 export const postLike = like => {
