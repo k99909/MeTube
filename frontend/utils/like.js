@@ -35,4 +35,4 @@ export const deleteLike = likeId => {
         method: 'DELETE',
         url: `/api/likes/${likeId}`
     });
-}
+};
