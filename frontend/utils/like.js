@@ -16,6 +16,8 @@ export const fetchLike = likeId => {
     });
 };
 
+// API Util to post Like
+
 export const postLike = like => {
     return $.ajax({
         method: 'POST',
