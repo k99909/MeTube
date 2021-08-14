@@ -1,5 +1,7 @@
 // API Util for likes
 
+//Ajax call to fetch all likes for a video by ID
+
 export const fetchLikes = videoId => {
     return $.ajax({
         method: 'GET',
@@ -35,6 +37,8 @@ export const updateLike = like => {
         data: { like }
     });
 };
+
+// Ajax call to delete Like given like ID
 
 export const deleteLike = likeId => {
     return $.ajax({
