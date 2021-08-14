@@ -26,6 +26,8 @@ export const postLike = like => {
     });
 };
 
+// Ajax call to update Like (like type)
+
 export const updateLike = like => {
     return $.ajax({
         method: 'PATCH',
