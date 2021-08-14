@@ -7,7 +7,7 @@ export const fetchLikes = videoId => {
     });
 };
 
-// API Util to fetch single like
+// Ajax call to fetch single like
 
 export const fetchLike = likeId => {
     return $.ajax({
