@@ -8,7 +8,7 @@ const mapStateToProps = state => ({
     loggedIn: Boolean(state.session.id)
 })
 
-// Creating 
+// Creating Auth routes for authorized component
 
 const Auth = ({ loggedIn, path, component: Component }) => (
     <Route
