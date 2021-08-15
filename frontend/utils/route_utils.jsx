@@ -19,6 +19,8 @@ const Auth = ({ loggedIn, path, component: Component }) => (
     />
 );
 
+// Creating Protected routes for components (If the user is not logged in, it will redirect to signup)
+
 const Protected = ({ loggedIn, path, component: Component }) => (
     <Route
      path={path}
